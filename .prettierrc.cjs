@@ -7,5 +7,5 @@ module.exports = {
   trailingComma: 'none',
   printWidth: 120,
   plugins: ['prettier-plugin-organize-imports', 'prettier-plugin-tailwindcss'],
-  tailwindFunctions: ['clsx', 'tv'],
+  tailwindFunctions: ['clsx', 'tv']
 };

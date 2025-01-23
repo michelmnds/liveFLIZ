@@ -1,598 +1,601 @@
 {
-    "Labels": {
-        "common": {
-            "button": {
-                "login": "Login",
-                "createAccount": "Registrieren",
-                "close": "Schließen",
-                "continue": "Weiter",
-                "confirm": "Bestätigen",
-                "cancel": "Stornieren"
-            },
-            "input": {
-                "shippingAddress": "Lieferadresse",
-                "billingAddress": "Rechnungsadresse",
-                "shippingBillingAddress": "Liefer- & Rechnungsadresse",
-                "email": "Email",
-                "password": "Passwort",
-                "street": "Straße",
-                "number": "Nr.",
-                "zipCode": "PLZ",
-                "city": "Ort",
-                "country": "Land",
-                "emailSearch": "Email suchen ...",
-                "paymentMessage": "Nachricht (optional):",
-                "paymentReadOnlyMessage": "Nachricht:",
-                "paymentMessagePlaceholder": "Schreibe hier ...",
-                "search": "Suchen..."
-            }
-        },
-        "landingPage": {
-            "title": {
-                "earnCashback": "Pssst... bei Zahlungen mit FLIZ erhältst du Cashback. Warum?  →",
-                "feeFree": "Zahlungsmethoden sind teuer. FLIZ kostet nichts und Firmen teilen die gesparten Gebühren mit dir als Cashback.",
-                "protection": "Außerdem bieten wir den besten Schutz für deine Zahlungen und Daten."
-            }
-        },
-        "loginScreen": {
-            "title": {
-                "welcomeBack": "Willkommen zurück!",
-                "inputEmail": "Bitte gib' die mit deinem FLIZ Konto verbundene Email ein.",
-                "enterPin": "Gib' deine PIN ein",
-                "forgotPassword": "PIN vergessen?",
-                "clickHere": "Klick’ hier!"
-            }
-        },
-        "chooseUserTypeScreen": {
-            "header": "Nutzerprofil",
-            "title": {
-                "choose": "Bitte wähle ein Profil 💼 👤",
-                "question": "Meldest du dich als Privatperson an, oder als Unternehmen, um etwas zu verkaufen?"
-            },
-            "button": {
-                "person": "👤 Privatperson",
-                "company": "💼 Unternehmen"
-            }
-        },
-        "createPasswordScreen": {
-            "title": "Erstelle eine PIN"
-        },
-        "registerScreen": {
-            "header": {
-                "createAccount": "Registrieren"
-            },
-            "title": {
-                "greetings": "Verbinde deine Email",
-                "signupIncentive": "Bitte verbinde eine Email mit deinem FLIZ Konto.",
-                "agreement": "Hiermit erstelle ich ein Konto und bestätige, dass ich mit den ",
-                "termsAndConditions": "AGBs",
-                "and": " und der ",
-                "privacyPolicy": "Datenschutzerklärung",
-                "companyName": " von FLIZ Pay einverstanden bin."
-            },
-            "input": {
-                "confirmPassword": "Passwort bestätigen"
-            }
-        },
-        "goToWebAppScreen": {
-            "header": "Erstelle ein Firmenkonto",
-            "title": {
-                "goToWebApp": "Erstelle bitte ein Konto auf unserer Website",
-                "clarification": "FLIZ Firmenkonten werden nicht in der FLIZpay App erstellt. Um Zahlungen vor Ort mit QR-Codes zu akzeptieren und Zahlungslinks mit der FLIZpay App zu senden:",
-                "step": {
-                    "createAccount": "Erstelle ein Konto unter\napp.flizpay.de/auth/signup",
-                    "return": "Kehre zur FLIZpay App zurück",
-                    "login": "Melde dich mit deinem neuen Konto an"
-                }
-            },
-            "button": {
-                "createAccount": "Erstelle ein Firmenkonto",
-                "proceedToLogin": "Weiter zum Login"
-            }
-        },
-        "verifyEmailScreen": {
-            "header": {
-                "emailVerification": "Verifizierung"
-            },
-            "title": {
-                "verify": "Verifiziere dich 👀",
-                "confirmationInstructions": "Bitte gib den Bestätigungscode ein, den du per Email erhalten hast. Checke ggf. deinen Spam-Ordner.",
-                "pinCreation": "Wir vereinfachen deinen Login und ersetzen Passwörter durch eine PIN-Authentifizierung. Bitte bestätige deine E-Mail und erstelle im nächsten Schritt eine sichere PIN.",
-                "resendCode": "Code erneut senden"
-            },
-            "button": {
-                "confirm": "Bestätigen"
-            }
-        },
-        "paymentDetailsScreen": {
-            "header": "Details",
-            "title": {
-                "recipient": "Empfänger",
-                "sender": "Zahler",
-                "amount": "Betrag",
-                "pending": "Offen",
-                "date": "Datum",
-                "description": "Verwendungszweck:",
-                "message": "Nachricht:",
-                "orderId": "Bestellung-ID:",
-                "info": "Diese Transaktion ist bestätigt. Es kann bis zu 24 Stunden dauern, bis das Geld auf dem Bankkonto eintrifft. Wenn eine Zahlung über ein Wochenende erfolgt, kann die Bearbeitungszeit bis zu 72 Stunden betragen."
-            },
-            "button": "Löschen",
-            "toast": "Erfolgreich gelöscht."
-        },
-        "successAccountCreationScreen": {
-            "title": {
-                "congratulations": "Glückwunsch, dein Konto wurde erstellt."
-            }
-        },
-        "dashboardScreen": {
-            "header": {
-                "home": "Home",
-                "cashbackEarned": "Erhaltener Cashback",
-                "earnMoreCashback": "Mehr Cashback"
-            },
-            "title": {
-                "flizTransactions": "FLIZ Transaktionen",
-                "addBankAccount": "Bankkonto hinzufügen!",
-                "paymentsClarification": "Mit FLIZ nimmt dein Geld keine Umwege über verschiedene Zwischenhändler. Alle Zahlungen gehen direkt von deinem Bankkonto an den Empfänger, ohne dass wir dein Geld je anfassen.",
-                "noTransactions": "Bisher keine Transaktionen.",
-                "deletedUser": "Gelöschtes Konto"
-            },
-            "input": {
-                "search": "Suche..."
-            },
-            "button": {
-                "addBankAccount": "Verbinde dein Bankkonto mit FLIZ!",
-                "request": "Erhalten",
-                "scan": "Scannen",
-                "send": "Senden"
-            }
-        },
-        "notificationsScreen": {
-            "header": "Benachrichtigungen",
-            "button": {
-                "send": "Jetzt senden",
-                "requested": "Angefragt"
-            }
-        },
-        "selectBankScreen": {
-            "header": {
-                "selectBank": "Wähle deine Bank"
-            },
-            "title": {
-                "payWithFliz": "Zahle mit deinem Bankkonto",
-                "selectingInstructions": "Wähle deine Bank aus der Liste der beliebtesten Banken oder nutze die Suche.",
-                "searchingForBank": "Du findest weitere Banken mit der Suche."
-            },
-            "input": {
-                "search": "Suchen..."
-            }
-        },
-        "bankCredentialsScreen": {
-            "header": {
-                "connectBank": "Verbinde deine Bank"
-            },
-            "title": {
-                "connectionInstructions": "Melde dich bei deiner Bank an und wähle dein Konto",
-                "loginDetailsInstructions": "Bitte verwende dieselben Anmeldedaten, die du auch für dein Online-Banking nutzt. Du musst anschließend ggf. deine FLIZ-Anmeldung in der App deiner Bank bestätigen. \nUm dir das Bezahlen zu erleichtern, werden deine Online-Banking-Anmeldedaten sicher auf deinem Handy gespeichert - außerhalb der Fliz-App. Sie werden niemals mit der Fliz Pay GmbH, deren Mitarbeitern oder Dritten geteilt oder diesen zugänglich gemacht."
-            }
-        },
-        "selectTANScreen": {
-            "header": {
-                "selectTAN": "Wähle deine TAN-Methode"
-            },
-            "title": {
-                "chooseTAN": "Wähle deine bevorzugte TAN-Methode",
-                "TANClarification": "Du hast mehr als eine aktive TAN-App oder -Methode. Zum Beispiel könnte die TAN-App deiner Bank noch auf einem alten Telefon aktiv sein. Falls dir nicht klar ist, was du wählen sollst, dann ist wahrscheinlich die unterste Option deine derzeit aktive TAN-Methode (und ja, die Namen können seltsam klingen 😵‍💫)."
-            }
-        },
-        "selectAccountScreen": {
-            "header": {
-                "selectAccount": "Wähle dein Konto"
-            },
-            "title": {
-                "chooseAccount": "Wähle dein Konto für Zahlungen mit FLIZ",
-                "correctIban": "Bitte klicke auf die IBAN, die du für Zahlungen mit FLIZ verwenden möchtest. Stelle sicher, dass du ein Girokonto verwendest. Wähle z.B. kein Sparkonto."
-            }
-        },
-        "successBankAccountScreen": {
-            "title": {
-                "success": "Glückwunsch, du hast dein Konto verbunden."
-            }
-        },
-        "selectRecipientScreen": {
-            "header": "Senden an",
-            "title": {
-                "recentContact": "Deine Kontakte"
-            },
-            "input": "Email suchen ..."
-        },
-        "confirmPaymentScreen": {
-            "header": "Zahlen",
-            "title": {
-                "description": "Verwendungszweck:",
-                "message": "Nachricht (optional):"
-            },
-            "input": {
-                "amount": "0,00",
-                "message": "Schreibe hier ..."
-            },
-            "button": {
-                "payNow": "Jetzt zahlen",
-                "cancel": "Zahlung abbrechen"
-            }
-        },
-        "profileScreen": {
-            "header": {
-                "profile": "Profil",
-                "deleteAccount": "Konto löschen"
-            },
-            "title": {
-                "bankAccount": "Verbundenes Bankkonto",
-                "companyAccount": "Verbundenes Firmenkonto",
-                "personalInfo": "Persönliche Informationen",
-                "name": "Dein Name",
-                "noBankConnected": "Klick’ hier, um deine Bank zu verbinden.",
-                "address": "Adresse",
-                "billingAddress": "Rechnungsadresse",
-                "language": "Sprache"
-            },
-            "button": {
-                "logout": "Logout"
-            },
-            "language": {
-                "english": "Englisch",
-                "german": "Deutsch"
-            }
-        },
-        "editProfileScreen": {
-            "header": {
-                "editInfo": "Persönliche Infos bearbeiten"
-            },
-            "title": {
-                "name": "Dein Name",
-                "email": "Email",
-                "password": "Passwort"
-            },
-            "input": {
-                "noAccountConnected": "Kein Konto verbunden"
-            }
-        },
-        "editAddressScreen": {
-            "header": {
-                "editAddress": "Adresse bearbeiten"
-            },
-            "title": {
-                "address": "Rechnungsadresse"
-            },
-            "button": {
-                "save": "Speichern"
-            }
-        },
-        "logoutScreen": {
-            "header": {
-                "logout": "Logout"
-            },
-            "title": {
-                "question": "Bist du sicher, dass du dich abmelden willst?"
-            },
-            "option": {
-                "no": "Nein",
-                "yes": "Ja"
-            }
-        },
-        "deleteAccountScreen": {
-            "header": {
-                "deleteAccount": "Konto löschen"
-            },
-            "title": {
-                "question": "Bist du sicher, dass du dein Konto löschen möchtest?"
-            },
-            "option": {
-                "no": "Nein",
-                "yes": "Ja"
-            }
-        },
-        "processPaymentScreen": {
-            "title": "Eine Sekunde bitte 🙏"
-        },
-        "fieldResponseScreen": {
-            "header": {
-                "verifyTransaction": "Transaktion verifizieren"
-            },
-            "title": {
-                "insertTan": "Gib bitte deine TAN ein 🤓",
-                "TANInstructions": "Wenn du keine Push-Benachrichtigung von deiner Bank erhalten hast, öffne bitte die TAN-App deiner Bank, überprüfe deine SMS oder verwende deinen chipTAN-Generator. Du erhältst die TAN auf dem Weg, den du mit deiner Bank vereinbart hast."
-            },
-            "input": {
-                "tan": "TAN"
-            },
-            "button": {
-                "submit": "TAN absenden"
-            }
-        },
-        "successPaymentScreen": {
-            "title": {
-                "success": "Zahlung erfolgreich",
-                "to": "an"
-            }
-        },
-        "confirmTransactionScreen": {
-            "title": {
-                "instructions": "Bestätige in deiner Bank-App 🤓",
-                "clarification": "Wenn du keine push-Benachrichtigung von deiner Bank-App erhalten hast, empfehlen wir dir, diese zu aktivieren, um deine Zahlungen mit FLIZ zu vereinfachen."
-            }
-        },
-        "resetPasswordScreen": {
-            "title": "Neue PIN eingeben"
-        },
-        "forgotPasswordScreen": {
-            "header": {
-                "resetPassword": "PIN zurücksetzen"
-            },
-            "title": {
-                "provideEmail": "Bitte gib die mit deinem Konto verknüpfte Email an ✉️",
-                "explanation": "... damit wir dir einen Bestätigungscode senden können, mit dem du deine PIN zurücksetzen kannst."
-            }
-        },
-        "qrcScreen": {
-            "title": "Zum Zahlen QR-Code scannen"
-        },
-        "smallBankItem": {
-            "title": "Keine Bank verbunden"
-        },
-        "transactionDate": {
-            "text": {
-                "today": "Heute",
-                "yesterday": "Gestern"
-            }
-        },
-        "failureBankAccountScreen": {
-            "title": "Deine Bank wurde noch nicht freigeschaltet. Wir melden uns, wenn es soweit ist."
-        },
-        "inputIbanScreen": {
-            "header": {
-                "iban": "IBAN"
-            },
-            "title": {
-                "instructions": "Bitte gib deine IBAN ein",
-                "clarification": "Wir benötigen deine IBAN, um dein Konto zu finden. Außerdem kannst du so über die FLIZ App Zahlungen erhalten."
-            },
-            "input": "IBAN"
-        },
-        "inputNameScreen": {
-            "header": {
-                "createAccount": "Registrieren"
-            },
-            "title": {
-                "greetings": "Hey! 👋",
-                "introduction": "Wir wollen dich zunächst besser kennenlernen."
-            },
-            "input": {
-                "firstName": "Vorname",
-                "lastName": "Nachname"
-            }
-        },
-        "inputAddressScreen": {
-            "header": {
-                "createAccount": "Registrieren"
-            },
-            "title": {
-                "greetings": "Adresse 🏠",
-                "introduction": "Bitte gib deine Rechnungsadresse an, z.B. für Spendenbescheinigungen."
-            }
-        },
-        "requestPaymentMethodSelectScreen": {
-            "header": "Anfragen mit",
-            "button": {
-                "qrcode": "Anfragen mit QR-Code",
-                "link": "Anfragen mit Link"
-            },
-            "title": {
-                "requestWithEmail": "Anfragen mit Email",
-                "recentContacts": "Deine Kontakte"
-            }
-        },
-        "requestPaymentByEmailScreen": {
-            "header": "Anfragen mit Email",
-            "button": "Anfrage abschicken"
-        },
-        "requestPaymentByLinkScreen": {
-            "header": "Anfragen mit Link",
-            "button": {
-                "generate": "Link erstellen",
-                "generateID": "ID link",
-                "link": "Link teilen",
-                "linkID": "ID Link teilen"
-            },
-            "text": {
-                "linkBelow": "ID Link unten",
-                "multiple": "Dieser Link kann für mehrere Zahlungen verwendet werden und läuft nie ab.",
-                "copy": "Du kannst diesen Link mit jemandem teilen, der dich bezahlen muss.",
-                "account": "Dieser Link identifiziert dein Konto eindeutig und wird für dein FLIZ Konto immer gleich bleiben.",
-                "amount": "Wenn jemand deinen Link klickt, kann sie/er selber einen Betrag eingeben und eine Nachricht hinzufügen, um dich zu bezahlen.",
-                "linkID": "Dein ID Link",
-                "copied": "Dein {{linkType}} wurde erfolgreich kopiert."
-            }
-        },
-        "requestPaymentByQRCScreen": {
-            "header": "Anfragen mit QR-Code",
-            "button": {
-                "generate": "QR-Code erstellen",
-                "generateID": "ID QR-Code"
-            },
-            "text": {
-                "linkBelow": "ID QR-Code unten",
-                "multiple": "Dieser QR-Code kann für mehrere Zahlungen verwendet werden und läuft nie ab.",
-                "support": "Der QR-Code ist zum Scannen mit der FLIZ App optimiert, funktioniert aber auch mit jeder Smartphone Kamera.",
-                "share": "Du kannst den Icon oben im Bildschirm anklicken, um den QR-Code herunterzuladen, zum Beispiel zum Ausdrucken oder Teilen.",
-                "account": "Dieser QR-Code identifiziert dein Konto eindeutig und wird für dein FLIZ Konto immer gleich bleiben.",
-                "amount": "Wenn jemand deinen QR-Code scannt, kann sie/er selber einen Betrag eingeben und eine Nachricht hinzufügen, um dich zu bezahlen.",
-                "qrcID": "Dein ID QR-Code",
-                "requiredPermission": "Die Berechtigung zum Zugriff auf die Kamerarolle ist erforderlich.",
-                "savedToCameraRoll": "Dein QR-Code wurde erfolgreich gespeichert.",
-                "failedSaveToCameraRoll": "Fehler beim Speichern des QR-Codes in der Kamerarolle."
-            }
-        },
-        "appUpdateRequiredScreen": {
-            "updateRequired": "Bitte aktualisiere die App!",
-            "latestFeatures": "Ein Update ist nötig, damit du alle Funktionen und Verbesserungen nutzen kannst!",
-            "updateNow": "Jetzt aktualisieren"
-        },
-        "accountOrPayFailure": {
-            "title": {
-                "account": "Verbindungsfehler",
-                "pay": "Zahlung fehlgeschlagen"
-            },
-            "bankResponse": "Rückmeldung deiner Bank:",
-            "noBankResponse": "Wir haben von deiner Bank keine Rückmeldung zum Fehler erhalten.",
-            "reasons": {
-                "account": "Banken geben teilweise schwer verständliche Antworten. Daher findest du hier die häufigsten Gründe, warum die Verbindung mit deiner Bank nicht geklappt hat:",
-                "pay": "Banken geben teilweise schwer verständliche Antworten. Daher findest du hier die häufigsten Gründe, warum deine Zahlung nicht verarbeitet werden konnte:",
-                "noApp": "Die App deiner Bank ist nicht auf deinem Handy installiert.",
-                "insufficientFunds": "Dein Guthaben ist zu gering.",
-                "dailyLimit": "Du hast dein Überweisungs- oder Tageslimit ütberschritten.",
-                "credentials": "Deine Anmeldedaten sind falsch."
-            },
-            "help": {
-                "madeMistake": ", wenn du glaubst, dass wir einen Fehler gemacht haben - wir helfen dir gerne weiter.",
-                "contactUs": "Melde dich bei uns"
-            },
-            "mail": {
-                "subject": "Hilfe",
-                "body": "Bitte beschreibe dein Anliegen: "
-            }
-        },
-        "transactionFiltersScreen": {
-            "title": "Transaktionsfilter",
-            "button": {
-                "reset": "Zurücksetzen",
-                "results": "Ergebnisse anzeigen"
-            },
-            "labels": {
-                "transactionTypes": "Transaktionsarten",
-                "dateRange": "Datumsbereich",
-                "amountRange": "Betragsbereich"
-            },
-            "placeholders": {
-                "from": "Aus",
-                "to": "Zu",
-                "both": "Sowohl eingehend als auch ausgehend",
-                "incoming": "Nur eingehend",
-                "outgoing": "Nur ausgehend"
-            },
-            "toasts": {
-                "amountFrom": "Der Betrag von muss kleiner sein als der Betrag bis",
-                "dateFrom": "Das Von-Datum muss vor dem Bis-Datum liegen"
-            }
-        },
-        "featuredShopsScreen": {
-            "header": "Shops",
-            "title": {
-                "featuredShops": "Featured Shops",
-                "topCashback": "Top Cashback Offers!",
-                "categories": "Shop Kategorien"
-            },
-            "categories": {
-                "mobility": "Mobilität",
-                "sports": "Sport",
-                "home-garden": "Haus & Garten",
-                "pets": "Haustiere",
-                "fashion": "Mode",
-                "electronics": "Elektronik",
-                "entertainment": "Entertainment",
-                "tickets": "Tickets",
-                "education": "Bildung",
-                "food-drinks": "Essen & Trinken",
-                "health-beauty": "Gesundheit & Beauty",
-                "sustainable": "Nachhaltig",
-                "other": "Sonstige",
-                "leisure": "Hobbys"
-            }
-        },
-        "shopsByCategoryScreen": {
-            "sort": {
-                "sortBy": "Sortieren nach",
-                "name": "Name",
-                "cashbacks": "Cashback absteigend"
-            },
-            "categories": {
-                "mobility": "Mobilität",
-                "sports": "Sport",
-                "home-garden": "Haus & Garten",
-                "pets": "Haustiere",
-                "fashion": "Mode",
-                "electronics": "Elektronik",
-                "entertainment": "Entertainment",
-                "tickets": "Tickets",
-                "education": "Bildung",
-                "food-drinks": "Essen & Trinken",
-                "health-beauty": "Gesundheit & Beauty",
-                "sustainable": "Nachhaltig",
-                "other": "Sonstige",
-                "leisure": "Hobbys"
-            }
-        },
-        "expressCheckout": {
-            "header": "Zahlen",
-            "address": {
-                "billing-shipping": "Liefer- & Rechnungsadresse",
-                "noAddress": "Bitte geben Sie die Lieferadresse an, um die Zahlung abzuschließen."
-            },
-            "shippingOptions": {
-                "label": {
-                    "chooseMethod": "Wähle eine Versandoption:",
-                    "noOptions": "Keine Versandoptionen abgerufen. Bitte geben Sie Ihre Versandadresse an."
-                },
-                "toast": "Versandoptionen konnten nicht abgerufen werden. Bitte versuche es erneut."
-            },
-            "totals": {
-                "subtotal": "Zwischensumme",
-                "shippingFee": "Versandkosten",
-                "cashback": "Cashback",
-                "total": "Gesamt"
-            },
-            "button": "Bestätigen und zahlen"
-        },
-        "expressCheckoutShippingAddress": {
-            "header": "Lieferadresse",
-            "placeholder": "Lieferadresse",
-            "text": {
-                "needAddress": "Bitte gib deine Lieferadresse für Einkäufe mit FLIZpay an.",
-                "differentPerson": "An andere Person an dieser Adresse senden"
-            },
-            "toast": "Bitte gib eine vollständige Lieferadresse an, um deine Zahlung abzuschließen."
-        },
-        "expressCheckoutBillingAddress": {
-            "header": "Rechnungsadresse",
-            "placeholder": "Rechnungsadresse",
-            "text": {
-                "differentBilling": "Andere Rechnungsadresse?"
-            },
-            "toast": "Bitte gib eine vollständige Rechnungsadresse an, um deine Zahlung abzuschließen."
+  "Labels": {
+    "common": {
+      "button": {
+        "login": "Login",
+        "createAccount": "Registrieren",
+        "close": "Schließen",
+        "continue": "Weiter",
+        "confirm": "Bestätigen",
+        "cancel": "Stornieren"
+      },
+      "input": {
+        "username": "Username",
+        "fullName": "Full name",
+        "iban": "IBAN",
+        "shippingAddress": "Lieferadresse",
+        "billingAddress": "Rechnungsadresse",
+        "shippingBillingAddress": "Liefer- & Rechnungsadresse",
+        "email": "Email",
+        "password": "Passwort",
+        "street": "Straße",
+        "number": "Nr.",
+        "zipCode": "PLZ",
+        "city": "Ort",
+        "country": "Land",
+        "emailSearch": "Email suchen ...",
+        "paymentMessage": "Nachricht (optional):",
+        "paymentReadOnlyMessage": "Nachricht:",
+        "paymentMessagePlaceholder": "Schreibe hier ...",
+        "search": "Suchen..."
+      }
+    },
+    "landingPage": {
+      "title": {
+        "earnCashback": "Pssst... bei Zahlungen mit FLIZ erhältst du Cashback. Warum?  →",
+        "feeFree": "Zahlungsmethoden sind teuer. FLIZ kostet nichts und Firmen teilen die gesparten Gebühren mit dir als Cashback.",
+        "protection": "Außerdem bieten wir den besten Schutz für deine Zahlungen und Daten."
+      }
+    },
+    "loginScreen": {
+      "title": {
+        "welcomeBack": "Willkommen zurück!",
+        "inputEmail": "Bitte gib' die mit deinem FLIZ Konto verbundene Email ein.",
+        "enterPin": "Gib' deine PIN ein",
+        "forgotPassword": "PIN vergessen?",
+        "clickHere": "Klick’ hier!"
+      }
+    },
+    "chooseUserTypeScreen": {
+      "header": "Nutzerprofil",
+      "title": {
+        "choose": "Bitte wähle ein Profil 💼 👤",
+        "question": "Meldest du dich als Privatperson an, oder als Unternehmen, um etwas zu verkaufen?"
+      },
+      "button": {
+        "person": "👤 Privatperson",
+        "company": "💼 Unternehmen"
+      }
+    },
+    "createPasswordScreen": {
+      "title": "Erstelle eine PIN"
+    },
+    "registerScreen": {
+      "header": {
+        "createAccount": "Registrieren"
+      },
+      "title": {
+        "greetings": "Verbinde deine Email",
+        "signupIncentive": "Bitte verbinde eine Email mit deinem FLIZ Konto.",
+        "agreement": "Hiermit erstelle ich ein Konto und bestätige, dass ich mit den ",
+        "termsAndConditions": "AGBs",
+        "and": " und der ",
+        "privacyPolicy": "Datenschutzerklärung",
+        "companyName": " von FLIZ Pay einverstanden bin."
+      },
+      "input": {
+        "confirmPassword": "Passwort bestätigen"
+      }
+    },
+    "goToWebAppScreen": {
+      "header": "Erstelle ein Firmenkonto",
+      "title": {
+        "goToWebApp": "Erstelle bitte ein Konto auf unserer Website",
+        "clarification": "FLIZ Firmenkonten werden nicht in der FLIZpay App erstellt. Um Zahlungen vor Ort mit QR-Codes zu akzeptieren und Zahlungslinks mit der FLIZpay App zu senden:",
+        "step": {
+          "createAccount": "Erstelle ein Konto unter\napp.flizpay.de/auth/signup",
+          "return": "Kehre zur FLIZpay App zurück",
+          "login": "Melde dich mit deinem neuen Konto an"
         }
+      },
+      "button": {
+        "createAccount": "Erstelle ein Firmenkonto",
+        "proceedToLogin": "Weiter zum Login"
+      }
     },
-    "Successes": {
-        "passwordUpdate": "PIN aktualisiert.",
-        "resendEmailCode": "Code erneut zugesandt!",
-        "accountDeletion": "Dein Konto wurde gelöscht.",
-        "informationUpdate": "Deine Informationen wurden aktualisiert.",
-        "transactionCreated": "Erfolgreich angefordert!"
+    "verifyEmailScreen": {
+      "header": {
+        "emailVerification": "Verifizierung"
+      },
+      "title": {
+        "verify": "Verifiziere dich 👀",
+        "confirmationInstructions": "Bitte gib den Bestätigungscode ein, den du per Email erhalten hast. Checke ggf. deinen Spam-Ordner.",
+        "pinCreation": "Wir vereinfachen deinen Login und ersetzen Passwörter durch eine PIN-Authentifizierung. Bitte bestätige deine E-Mail und erstelle im nächsten Schritt eine sichere PIN.",
+        "resendCode": "Code erneut senden"
+      },
+      "button": {
+        "confirm": "Bestätigen"
+      }
     },
-    "Errors": {
-        "serverError": "Auf unserer Seite ist etwas schiefgegangen. Bitte versuche es später noch einmal.",
-        "passwordError": "Passwörter müssen übereinstimmen.",
-        "paymentError": "Zahlung konnte nicht verarbeitet werden. Bitte versuche es später erneut.",
-        "tanError": "TAN konnte nicht übermittelt werden. Bitte versuche es später erneut.",
-        "credentialsError": "Ungültige Anmeldedaten. Bitte versuche es erneut.",
-        "accountError": "Deine Bank konnte nicht verbunden werden. Bitte versuche es später erneut.",
-        "emptyFieldError": "Bitte stelle sicher, dass kein Feld leer ist.",
-        "noEmptySpaces": "Das {{field}}-Feld darf keine Leerzeichen enthalten",
-        "invalidIBAN": "Ungültige IBAN",
-        "noSpecialChars": "Sonderzeichen sind für dieses Feld nicht zulässig",
-        "sendingMoneyToItself": "Du kannst dich nicht selbst bezahlen.",
-        "emailError": "Ungültige Email-Adresse.",
-        "unableToGenerateLink": "Erstellung fehlgeschlagen. Versuche es bitte später noch einmal.",
-        "unableToPayWithBusinessRole": "Du versuchst eine Zahlung mit deinem FLIZ-Firmenkonto abzuschließen. Das geht nicht. Bitte melde dich in deinem privaten FLIZ-Konto an, um die Transaktion abzuschließen."
+    "paymentDetailsScreen": {
+      "header": "Details",
+      "title": {
+        "recipient": "Empfänger",
+        "sender": "Zahler",
+        "amount": "Betrag",
+        "pending": "Offen",
+        "date": "Datum",
+        "description": "Verwendungszweck:",
+        "message": "Nachricht:",
+        "orderId": "Bestellung-ID:",
+        "info": "Diese Transaktion ist bestätigt. Es kann bis zu 24 Stunden dauern, bis das Geld auf dem Bankkonto eintrifft. Wenn eine Zahlung über ein Wochenende erfolgt, kann die Bearbeitungszeit bis zu 72 Stunden betragen."
+      },
+      "button": "Löschen",
+      "toast": "Erfolgreich gelöscht."
+    },
+    "successAccountCreationScreen": {
+      "title": {
+        "congratulations": "Glückwunsch, dein Konto wurde erstellt."
+      }
+    },
+    "dashboardScreen": {
+      "header": {
+        "home": "Home",
+        "cashbackEarned": "Erhaltener Cashback",
+        "earnMoreCashback": "Mehr Cashback"
+      },
+      "title": {
+        "flizTransactions": "FLIZ Transaktionen",
+        "addBankAccount": "Bankkonto hinzufügen!",
+        "paymentsClarification": "Mit FLIZ nimmt dein Geld keine Umwege über verschiedene Zwischenhändler. Alle Zahlungen gehen direkt von deinem Bankkonto an den Empfänger, ohne dass wir dein Geld je anfassen.",
+        "noTransactions": "Bisher keine Transaktionen.",
+        "deletedUser": "Gelöschtes Konto"
+      },
+      "input": {
+        "search": "Suche..."
+      },
+      "button": {
+        "addBankAccount": "Verbinde dein Bankkonto mit FLIZ!",
+        "request": "Erhalten",
+        "scan": "Scannen",
+        "send": "Senden"
+      }
+    },
+    "notificationsScreen": {
+      "header": "Benachrichtigungen",
+      "button": {
+        "send": "Jetzt senden",
+        "requested": "Angefragt"
+      }
+    },
+    "selectBankScreen": {
+      "header": {
+        "selectBank": "Wähle deine Bank"
+      },
+      "title": {
+        "payWithFliz": "Zahle mit deinem Bankkonto",
+        "selectingInstructions": "Wähle deine Bank aus der Liste der beliebtesten Banken oder nutze die Suche.",
+        "searchingForBank": "Du findest weitere Banken mit der Suche."
+      },
+      "input": {
+        "search": "Suchen..."
+      }
+    },
+    "bankCredentialsScreen": {
+      "header": {
+        "connectBank": "Verbinde deine Bank"
+      },
+      "title": {
+        "connectionInstructions": "Melde dich bei deiner Bank an und wähle dein Konto",
+        "loginDetailsInstructions": "Bitte verwende dieselben Anmeldedaten, die du auch für dein Online-Banking nutzt. Du musst anschließend ggf. deine FLIZ-Anmeldung in der App deiner Bank bestätigen. \nUm dir das Bezahlen zu erleichtern, werden deine Online-Banking-Anmeldedaten sicher auf deinem Handy gespeichert - außerhalb der Fliz-App. Sie werden niemals mit der Fliz Pay GmbH, deren Mitarbeitern oder Dritten geteilt oder diesen zugänglich gemacht."
+      }
+    },
+    "selectTANScreen": {
+      "header": {
+        "selectTAN": "Wähle deine TAN-Methode"
+      },
+      "title": {
+        "chooseTAN": "Wähle deine bevorzugte TAN-Methode",
+        "TANClarification": "Du hast mehr als eine aktive TAN-App oder -Methode. Zum Beispiel könnte die TAN-App deiner Bank noch auf einem alten Telefon aktiv sein. Falls dir nicht klar ist, was du wählen sollst, dann ist wahrscheinlich die unterste Option deine derzeit aktive TAN-Methode (und ja, die Namen können seltsam klingen 😵‍💫)."
+      }
+    },
+    "selectAccountScreen": {
+      "header": {
+        "selectAccount": "Wähle dein Konto"
+      },
+      "title": {
+        "chooseAccount": "Wähle dein Konto für Zahlungen mit FLIZ",
+        "correctIban": "Bitte klicke auf die IBAN, die du für Zahlungen mit FLIZ verwenden möchtest. Stelle sicher, dass du ein Girokonto verwendest. Wähle z.B. kein Sparkonto."
+      }
+    },
+    "successBankAccountScreen": {
+      "title": {
+        "success": "Glückwunsch, du hast dein Konto verbunden."
+      }
+    },
+    "selectRecipientScreen": {
+      "header": "Senden an",
+      "title": {
+        "recentContact": "Deine Kontakte"
+      },
+      "input": "Email suchen ..."
+    },
+    "confirmPaymentScreen": {
+      "header": "Zahlen",
+      "title": {
+        "description": "Verwendungszweck:",
+        "message": "Nachricht (optional):"
+      },
+      "input": {
+        "amount": "0,00",
+        "message": "Schreibe hier ..."
+      },
+      "button": {
+        "payNow": "Jetzt zahlen",
+        "cancel": "Zahlung abbrechen"
+      }
+    },
+    "profileScreen": {
+      "header": {
+        "profile": "Profil",
+        "deleteAccount": "Konto löschen"
+      },
+      "title": {
+        "bankAccount": "Verbundenes Bankkonto",
+        "companyAccount": "Verbundenes Firmenkonto",
+        "personalInfo": "Persönliche Informationen",
+        "name": "Dein Name",
+        "noBankConnected": "Klick’ hier, um deine Bank zu verbinden.",
+        "address": "Adresse",
+        "billingAddress": "Rechnungsadresse",
+        "language": "Sprache"
+      },
+      "button": {
+        "logout": "Logout"
+      },
+      "language": {
+        "english": "Englisch",
+        "german": "Deutsch"
+      }
+    },
+    "editProfileScreen": {
+      "header": {
+        "editInfo": "Persönliche Infos bearbeiten"
+      },
+      "title": {
+        "name": "Dein Name",
+        "email": "Email",
+        "password": "Passwort"
+      },
+      "input": {
+        "noAccountConnected": "Kein Konto verbunden"
+      }
+    },
+    "editAddressScreen": {
+      "header": {
+        "editAddress": "Adresse bearbeiten"
+      },
+      "title": {
+        "address": "Rechnungsadresse"
+      },
+      "button": {
+        "save": "Speichern"
+      }
+    },
+    "logoutScreen": {
+      "header": {
+        "logout": "Logout"
+      },
+      "title": {
+        "question": "Bist du sicher, dass du dich abmelden willst?"
+      },
+      "option": {
+        "no": "Nein",
+        "yes": "Ja"
+      }
+    },
+    "deleteAccountScreen": {
+      "header": {
+        "deleteAccount": "Konto löschen"
+      },
+      "title": {
+        "question": "Bist du sicher, dass du dein Konto löschen möchtest?"
+      },
+      "option": {
+        "no": "Nein",
+        "yes": "Ja"
+      }
+    },
+    "processPaymentScreen": {
+      "title": "Eine Sekunde bitte 🙏"
+    },
+    "fieldResponseScreen": {
+      "header": {
+        "verifyTransaction": "Transaktion verifizieren"
+      },
+      "title": {
+        "insertTan": "Gib bitte deine TAN ein 🤓",
+        "TANInstructions": "Wenn du keine Push-Benachrichtigung von deiner Bank erhalten hast, öffne bitte die TAN-App deiner Bank, überprüfe deine SMS oder verwende deinen chipTAN-Generator. Du erhältst die TAN auf dem Weg, den du mit deiner Bank vereinbart hast."
+      },
+      "input": {
+        "tan": "TAN"
+      },
+      "button": {
+        "submit": "TAN absenden"
+      }
+    },
+    "successPaymentScreen": {
+      "title": {
+        "success": "Zahlung erfolgreich",
+        "to": "an"
+      }
+    },
+    "confirmTransactionScreen": {
+      "title": {
+        "instructions": "Bestätige in deiner Bank-App 🤓",
+        "clarification": "Wenn du keine push-Benachrichtigung von deiner Bank-App erhalten hast, empfehlen wir dir, diese zu aktivieren, um deine Zahlungen mit FLIZ zu vereinfachen."
+      }
+    },
+    "resetPasswordScreen": {
+      "title": "Neue PIN eingeben"
+    },
+    "forgotPasswordScreen": {
+      "header": {
+        "resetPassword": "PIN zurücksetzen"
+      },
+      "title": {
+        "provideEmail": "Bitte gib die mit deinem Konto verknüpfte Email an ✉️",
+        "explanation": "... damit wir dir einen Bestätigungscode senden können, mit dem du deine PIN zurücksetzen kannst."
+      }
+    },
+    "qrcScreen": {
+      "title": "Zum Zahlen QR-Code scannen"
+    },
+    "smallBankItem": {
+      "title": "Keine Bank verbunden"
+    },
+    "transactionDate": {
+      "text": {
+        "today": "Heute",
+        "yesterday": "Gestern"
+      }
+    },
+    "failureBankAccountScreen": {
+      "title": "Deine Bank wurde noch nicht freigeschaltet. Wir melden uns, wenn es soweit ist."
+    },
+    "inputIbanScreen": {
+      "header": {
+        "iban": "IBAN"
+      },
+      "title": {
+        "instructions": "Bitte gib deine IBAN ein",
+        "clarification": "Wir benötigen deine IBAN, um dein Konto zu finden. Außerdem kannst du so über die FLIZ App Zahlungen erhalten."
+      },
+      "input": "IBAN"
+    },
+    "inputNameScreen": {
+      "header": {
+        "createAccount": "Registrieren"
+      },
+      "title": {
+        "greetings": "Hey! 👋",
+        "introduction": "Wir wollen dich zunächst besser kennenlernen."
+      },
+      "input": {
+        "firstName": "Vorname",
+        "lastName": "Nachname"
+      }
+    },
+    "inputAddressScreen": {
+      "header": {
+        "createAccount": "Registrieren"
+      },
+      "title": {
+        "greetings": "Adresse 🏠",
+        "introduction": "Bitte gib deine Rechnungsadresse an, z.B. für Spendenbescheinigungen."
+      }
+    },
+    "requestPaymentMethodSelectScreen": {
+      "header": "Anfragen mit",
+      "button": {
+        "qrcode": "Anfragen mit QR-Code",
+        "link": "Anfragen mit Link"
+      },
+      "title": {
+        "requestWithEmail": "Anfragen mit Email",
+        "recentContacts": "Deine Kontakte"
+      }
+    },
+    "requestPaymentByEmailScreen": {
+      "header": "Anfragen mit Email",
+      "button": "Anfrage abschicken"
+    },
+    "requestPaymentByLinkScreen": {
+      "header": "Anfragen mit Link",
+      "button": {
+        "generate": "Link erstellen",
+        "generateID": "ID link",
+        "link": "Link teilen",
+        "linkID": "ID Link teilen"
+      },
+      "text": {
+        "linkBelow": "ID Link unten",
+        "multiple": "Dieser Link kann für mehrere Zahlungen verwendet werden und läuft nie ab.",
+        "copy": "Du kannst diesen Link mit jemandem teilen, der dich bezahlen muss.",
+        "account": "Dieser Link identifiziert dein Konto eindeutig und wird für dein FLIZ Konto immer gleich bleiben.",
+        "amount": "Wenn jemand deinen Link klickt, kann sie/er selber einen Betrag eingeben und eine Nachricht hinzufügen, um dich zu bezahlen.",
+        "linkID": "Dein ID Link",
+        "copied": "Dein {{linkType}} wurde erfolgreich kopiert."
+      }
+    },
+    "requestPaymentByQRCScreen": {
+      "header": "Anfragen mit QR-Code",
+      "button": {
+        "generate": "QR-Code erstellen",
+        "generateID": "ID QR-Code"
+      },
+      "text": {
+        "linkBelow": "ID QR-Code unten",
+        "multiple": "Dieser QR-Code kann für mehrere Zahlungen verwendet werden und läuft nie ab.",
+        "support": "Der QR-Code ist zum Scannen mit der FLIZ App optimiert, funktioniert aber auch mit jeder Smartphone Kamera.",
+        "share": "Du kannst den Icon oben im Bildschirm anklicken, um den QR-Code herunterzuladen, zum Beispiel zum Ausdrucken oder Teilen.",
+        "account": "Dieser QR-Code identifiziert dein Konto eindeutig und wird für dein FLIZ Konto immer gleich bleiben.",
+        "amount": "Wenn jemand deinen QR-Code scannt, kann sie/er selber einen Betrag eingeben und eine Nachricht hinzufügen, um dich zu bezahlen.",
+        "qrcID": "Dein ID QR-Code",
+        "requiredPermission": "Die Berechtigung zum Zugriff auf die Kamerarolle ist erforderlich.",
+        "savedToCameraRoll": "Dein QR-Code wurde erfolgreich gespeichert.",
+        "failedSaveToCameraRoll": "Fehler beim Speichern des QR-Codes in der Kamerarolle."
+      }
+    },
+    "appUpdateRequiredScreen": {
+      "updateRequired": "Bitte aktualisiere die App!",
+      "latestFeatures": "Ein Update ist nötig, damit du alle Funktionen und Verbesserungen nutzen kannst!",
+      "updateNow": "Jetzt aktualisieren"
+    },
+    "accountOrPayFailure": {
+      "title": {
+        "account": "Verbindungsfehler",
+        "pay": "Zahlung fehlgeschlagen"
+      },
+      "bankResponse": "Rückmeldung deiner Bank:",
+      "noBankResponse": "Wir haben von deiner Bank keine Rückmeldung zum Fehler erhalten.",
+      "reasons": {
+        "account": "Banken geben teilweise schwer verständliche Antworten. Daher findest du hier die häufigsten Gründe, warum die Verbindung mit deiner Bank nicht geklappt hat:",
+        "pay": "Banken geben teilweise schwer verständliche Antworten. Daher findest du hier die häufigsten Gründe, warum deine Zahlung nicht verarbeitet werden konnte:",
+        "noApp": "Die App deiner Bank ist nicht auf deinem Handy installiert.",
+        "insufficientFunds": "Dein Guthaben ist zu gering.",
+        "dailyLimit": "Du hast dein Überweisungs- oder Tageslimit ütberschritten.",
+        "credentials": "Deine Anmeldedaten sind falsch."
+      },
+      "help": {
+        "madeMistake": ", wenn du glaubst, dass wir einen Fehler gemacht haben - wir helfen dir gerne weiter.",
+        "contactUs": "Melde dich bei uns"
+      },
+      "mail": {
+        "subject": "Hilfe",
+        "body": "Bitte beschreibe dein Anliegen: "
+      }
+    },
+    "transactionFiltersScreen": {
+      "title": "Transaktionsfilter",
+      "button": {
+        "reset": "Zurücksetzen",
+        "results": "Ergebnisse anzeigen"
+      },
+      "labels": {
+        "transactionTypes": "Transaktionsarten",
+        "dateRange": "Datumsbereich",
+        "amountRange": "Betragsbereich"
+      },
+      "placeholders": {
+        "from": "Aus",
+        "to": "Zu",
+        "both": "Sowohl eingehend als auch ausgehend",
+        "incoming": "Nur eingehend",
+        "outgoing": "Nur ausgehend"
+      },
+      "toasts": {
+        "amountFrom": "Der Betrag von muss kleiner sein als der Betrag bis",
+        "dateFrom": "Das Von-Datum muss vor dem Bis-Datum liegen"
+      }
+    },
+    "featuredShopsScreen": {
+      "header": "Shops",
+      "title": {
+        "featuredShops": "Featured Shops",
+        "topCashback": "Top Cashback Offers!",
+        "categories": "Shop Kategorien"
+      },
+      "categories": {
+        "mobility": "Mobilität",
+        "sports": "Sport",
+        "home-garden": "Haus & Garten",
+        "pets": "Haustiere",
+        "fashion": "Mode",
+        "electronics": "Elektronik",
+        "entertainment": "Entertainment",
+        "tickets": "Tickets",
+        "education": "Bildung",
+        "food-drinks": "Essen & Trinken",
+        "health-beauty": "Gesundheit & Beauty",
+        "sustainable": "Nachhaltig",
+        "other": "Sonstige",
+        "leisure": "Hobbys"
+      }
+    },
+    "shopsByCategoryScreen": {
+      "sort": {
+        "sortBy": "Sortieren nach",
+        "name": "Name",
+        "cashbacks": "Cashback absteigend"
+      },
+      "categories": {
+        "mobility": "Mobilität",
+        "sports": "Sport",
+        "home-garden": "Haus & Garten",
+        "pets": "Haustiere",
+        "fashion": "Mode",
+        "electronics": "Elektronik",
+        "entertainment": "Entertainment",
+        "tickets": "Tickets",
+        "education": "Bildung",
+        "food-drinks": "Essen & Trinken",
+        "health-beauty": "Gesundheit & Beauty",
+        "sustainable": "Nachhaltig",
+        "other": "Sonstige",
+        "leisure": "Hobbys"
+      }
+    },
+    "expressCheckout": {
+      "header": "Zahlen",
+      "address": {
+        "billing-shipping": "Liefer- & Rechnungsadresse",
+        "noAddress": "Bitte geben Sie die Lieferadresse an, um die Zahlung abzuschließen."
+      },
+      "shippingOptions": {
+        "label": {
+          "chooseMethod": "Wähle eine Versandoption:",
+          "noOptions": "Keine Versandoptionen abgerufen. Bitte geben Sie Ihre Versandadresse an."
+        },
+        "toast": "Versandoptionen konnten nicht abgerufen werden. Bitte versuche es erneut."
+      },
+      "totals": {
+        "subtotal": "Zwischensumme",
+        "shippingFee": "Versandkosten",
+        "cashback": "Cashback",
+        "total": "Gesamt"
+      },
+      "button": "Bestätigen und zahlen"
+    },
+    "expressCheckoutShippingAddress": {
+      "header": "Lieferadresse",
+      "placeholder": "Lieferadresse",
+      "text": {
+        "needAddress": "Bitte gib deine Lieferadresse für Einkäufe mit FLIZpay an.",
+        "differentPerson": "An andere Person an dieser Adresse senden"
+      },
+      "toast": "Bitte gib eine vollständige Lieferadresse an, um deine Zahlung abzuschließen."
+    },
+    "expressCheckoutBillingAddress": {
+      "header": "Rechnungsadresse",
+      "placeholder": "Rechnungsadresse",
+      "text": {
+        "differentBilling": "Andere Rechnungsadresse?"
+      },
+      "toast": "Bitte gib eine vollständige Rechnungsadresse an, um deine Zahlung abzuschließen."
     }
+  },
+  "Successes": {
+    "passwordUpdate": "PIN aktualisiert.",
+    "resendEmailCode": "Code erneut zugesandt!",
+    "accountDeletion": "Dein Konto wurde gelöscht.",
+    "informationUpdate": "Deine Informationen wurden aktualisiert.",
+    "transactionCreated": "Erfolgreich angefordert!"
+  },
+  "Errors": {
+    "serverError": "Auf unserer Seite ist etwas schiefgegangen. Bitte versuche es später noch einmal.",
+    "passwordError": "Passwörter müssen übereinstimmen.",
+    "paymentError": "Zahlung konnte nicht verarbeitet werden. Bitte versuche es später erneut.",
+    "tanError": "TAN konnte nicht übermittelt werden. Bitte versuche es später erneut.",
+    "credentialsError": "Ungültige Anmeldedaten. Bitte versuche es erneut.",
+    "accountError": "Deine Bank konnte nicht verbunden werden. Bitte versuche es später erneut.",
+    "emptyFieldError": "Bitte stelle sicher, dass kein Feld leer ist.",
+    "noEmptySpaces": "Das {{field}}-Feld darf keine Leerzeichen enthalten",
+    "invalidIBAN": "Ungültige IBAN",
+    "noSpecialChars": "Sonderzeichen sind für dieses Feld nicht zulässig",
+    "sendingMoneyToItself": "Du kannst dich nicht selbst bezahlen.",
+    "emailError": "Ungültige Email-Adresse.",
+    "unableToGenerateLink": "Erstellung fehlgeschlagen. Versuche es bitte später noch einmal.",
+    "unableToPayWithBusinessRole": "Du versuchst eine Zahlung mit deinem FLIZ-Firmenkonto abzuschließen. Das geht nicht. Bitte melde dich in deinem privaten FLIZ-Konto an, um die Transaktion abzuschließen."
+  }
 }

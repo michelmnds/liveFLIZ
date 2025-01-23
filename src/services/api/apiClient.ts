@@ -1,9 +1,8 @@
-import { ConstantsStaging } from "@/config/constants";
-import { Res } from "@/types";
-import { Register } from "@tanstack/react-query";
-import axios, { AxiosInstance, isAxiosError } from "axios";
-import type { Session } from "next-auth";
-import { getSession, signOut } from "next-auth/react";
+import { Res } from '@/types';
+import { Register } from '@tanstack/react-query';
+import axios, { AxiosInstance, isAxiosError } from 'axios';
+import type { Session } from 'next-auth';
+import { getSession, signOut } from 'next-auth/react';
 
 /**
  * @name ApiClient
@@ -12,17 +11,17 @@ import { getSession, signOut } from "next-auth/react";
  */
 function ApiClient(): AxiosInstance {
   const instance = axios.create({
-    baseURL: ConstantsStaging.apiUrl,
+    baseURL: 'http://localhost:8080',
     headers: {
-      Accept: "application/json",
-    },
+      Accept: 'application/json'
+    }
   });
 
-  const isServer = typeof window === "undefined";
+  const isServer = typeof window === 'undefined';
 
   // --- REQUEST INTERCEPTOR ---
   instance.interceptors.request.use(
-    async (request) => {
+    async request => {
       let session: Session | null = null;
 
       // Only try to fetch the session if we're on the client
@@ -36,35 +35,33 @@ function ApiClient(): AxiosInstance {
 
       return request;
     },
-    (error) => {
+    error => {
       return Promise.reject(error);
     }
   );
 
   // --- RESPONSE INTERCEPTOR ---
   instance.interceptors.response.use(
-    (response) => {
+    response => {
       return response;
     },
-    async (error) => {
+    async error => {
       if (isAxiosError(error)) {
-        const invalidTokenMessages = ["Invalid token.", "Ungültiger Token."];
-        const isInvalidToken = invalidTokenMessages.includes(
-          error?.response?.data?.message
-        );
+        const invalidTokenMessages = ['Invalid token.', 'Ungültiger Token.'];
+        const isInvalidToken = invalidTokenMessages.includes(error?.response?.data?.message);
 
         if (isInvalidToken) {
           await signOut(); // Sign out client if token is invalid
         } else if (error.response && error.response.data) {
           error.message = error.response.data.message;
         } else if (error.request) {
-          error.message = "No response received from server";
+          error.message = 'No response received from server';
         } else {
-          error.message = "Error setting up request";
+          error.message = 'Error setting up request';
         }
         return Promise.reject(error);
       } else {
-        console.error("Error:", error);
+        console.error('Error:', error);
         return Promise.reject(error);
       }
     }
@@ -73,11 +70,8 @@ function ApiClient(): AxiosInstance {
   return instance;
 }
 
-export const register = async (data: Omit<Register, "confirmPassword">) => {
-  const response = await ApiClient().post<Res<{ token: string }>>(
-    "/person/register",
-    data
-  );
+export const register = async (data: Omit<Register, 'confirmPassword'>) => {
+  const response = await ApiClient().post<Res<{ token: string }>>('/streamer/register', data);
   return response.data.data.token;
 };
 
