@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primaryColor: #80ed99;
+  --secondaryColor: #001f3f;
+
+  --grey: #f9fafb;
+  --grey10: #e5e7eb;
+  --grey20: #9ca4af;
+  --grey40: #f1f1f1;
+  --grey80: #6b7280;
+
+  --blue80: #22577a;
+  --blue60: #38a3a5;
+
+  --green80: #57cc99;
+  --green60: #c7f9cc;
+  --green20: #f4fef5;
+
+  --red80: #ad102f;
+  --error: #ff6b6b;
+  --success: #c7f9cc;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+
+/****************************
+ * WRAPPER
+ ****************************/
+.wrapper-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  flex-grow: 1;
+}
+
+.wrapper-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px 21px;
+  gap: 25px;
+}
+
+/****************************
+   * BUTTON
+   ****************************/
+.button-title {
+  color: var(--secondaryColor);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.button-transparentTitle {
+  color: var(--grey80);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.button-small_greenButton {
+  width: 150px;
+  height: 56px;
+  border-radius: 16px;
+  background-color: var(--primaryColor);
+}
+
+.button-small_whiteButton {
+  width: 150px;
+  height: 56px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.button-big_greenButton {
+  width: auto;
+  height: 56px;
+  border-radius: 16px;
+  background-color: var(--primaryColor);
+  border: none;
+}
+
+.button-big_whiteButton {
+  width: auto;
+  height: 56px;
+  border-radius: 16px;
+  background-color: #fff;
+  border: 1px solid var(--secondaryColor);
+}
+
+.button-big_transparentButton {
+  width: auto;
+  height: 56px;
+  background-color: transparent;
+}
+
+/****************************
+   * LOGO
+   ****************************/
+.logo-normal {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.logo-badVisibility {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #fff;
+}
+
+/****************************
+   * INPUT
+   ****************************/
+.input-grey {
+  padding-left: 20px;
+  width: auto;
+  height: 56px;
+  background-color: var(--grey);
+  color: var(--secondaryColor);
+  border-radius: 16px;
+}
+
+/****************************
+   * TEXT
+   ****************************/
+.text-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--secondaryColor);
+}
+
+.text-subTitle {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--grey80);
+  margin-top: 10px;
+}
+
+.text-bankName {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--secondaryColor);
+  max-width: 85%;
+}
+
+.text-greenText {
+  color: var(--green80);
+}
