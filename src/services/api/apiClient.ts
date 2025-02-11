@@ -1,3 +1,4 @@
+import { StreamerType } from '@/schemas/streamer.schema';
 import { Res } from '@/types';
 import { Register } from '@tanstack/react-query';
 import axios, { AxiosInstance, isAxiosError } from 'axios';
@@ -73,6 +74,25 @@ function ApiClient(): AxiosInstance {
 export const register = async (data: Omit<Register, 'confirmPassword'>) => {
   const response = await ApiClient().post<Res<{ token: string }>>('/streamer/register', data);
   return response.data.data.token;
+};
+
+export const getStreamer = async () => {
+  const response = await ApiClient().get<Res<StreamerType>>('/streamer/');
+  return response.data.data;
+};
+
+export const testAlert = async (widgetId: string) => {
+  const response = await ApiClient().post<Res<StreamerType>>('/streamer/donation', {
+    donor: 'Alice',
+    message: 'Hello world!',
+    amount: 5,
+    widgetId
+  });
+  return response.data.data;
+};
+
+export const restartWidget = async (widgetId: string) => {
+  return await ApiClient().post<Res<string>>(`/streamer/widget/refresh/trigger/${widgetId}`);
 };
 
 export default ApiClient();

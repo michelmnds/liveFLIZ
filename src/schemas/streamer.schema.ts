@@ -1,4 +1,4 @@
-import { array, InferOutput, object, optional, string } from 'valibot';
+import { InferOutput, object, optional, string } from 'valibot';
 import { ibanSchema } from './iban.schema';
 
 export const streamerSchema = object({
@@ -11,12 +11,10 @@ export const streamerSchema = object({
   flizKey: string(),
   logoUrl: string(),
   language: optional(string()),
-  widgets: array(
-    object({
-      qrc_id: optional(string()),
-      alert_id: optional(string())
-    })
-  )
+  widgets: object({
+    qrc_id: optional(string()),
+    alert_id: optional(string())
+  })
 });
 
 export type StreamerType = InferOutput<typeof streamerSchema>;

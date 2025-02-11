@@ -11,6 +11,6 @@ declare module 'next-auth' {
     } & DefaultSession['user'];
   }
   interface User extends DefaultUser {
-    entityType?: 'business' | 'person';
+    entityType?: 'streamer';
   }
 }

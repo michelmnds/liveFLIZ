@@ -10,8 +10,13 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'flizimages.s3.eu-central-1.amazonaws.com',
         port: '',
-        pathname: '/**',
-        search: ''
+        pathname: '/**'
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '8080',
+        pathname: '/**'
       }
     ]
   }

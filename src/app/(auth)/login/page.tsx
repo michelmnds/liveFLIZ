@@ -29,7 +29,9 @@ export default function LoginPage() {
         password,
         redirect: false
       }),
-    onSuccess: () => {
+    onSuccess: data => {
+      if (data?.error) return alert(data.error);
+
       router.push('/dashboard');
     },
     onError: error => console.error(error)
@@ -47,6 +49,7 @@ export default function LoginPage() {
               <CustomInput
                 type="text"
                 autoCapitalize="none"
+                autoComplete="email"
                 setValue={onChange}
                 value={value}
                 placeholder={t('Labels.common.input.email')}
@@ -58,7 +61,7 @@ export default function LoginPage() {
           <Controller
             render={({ field: { onChange, value } }) => (
               <CustomInput
-                type="text"
+                type="password"
                 autoCapitalize="none"
                 setValue={onChange}
                 secureTextEntry

@@ -5,7 +5,7 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 type LoginResponse = {
   data: {
     token: string;
-    entityType: 'business' | 'person';
+    entityType: 'streamer';
   };
 };
 
