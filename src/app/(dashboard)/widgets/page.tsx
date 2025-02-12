@@ -58,7 +58,7 @@ export default function WidgetsPage() {
   return (
     <div className="flex min-h-screen w-full items-start justify-start gap-10">
       <NavBar />
-      <div className="flex flex-col items-start justify-center gap-12 py-10">
+      <div className="flex w-full flex-col items-start justify-center gap-12 py-10">
         <h1 className="text-3xl font-bold text-secondaryColor">Widgets</h1>
         <div className="flex flex-row items-start justify-center gap-5">
           <div className="flex flex-col items-start justify-center gap-1">
@@ -168,7 +168,7 @@ export default function WidgetsPage() {
                           </div>
                         </div>
                       </div>
-                      <AlertDialogCancel className="w-20 border-secondaryColor">Close</AlertDialogCancel>
+                      <AlertDialogCancel className="w-20 border-secondaryColor lg:py-2">Close</AlertDialogCancel>
                     </AlertDialogContent>
                   </AlertDialog>
                 </Tooltip>

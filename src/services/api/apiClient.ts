@@ -1,5 +1,5 @@
 import { StreamerType } from '@/schemas/streamer.schema';
-import { Res } from '@/types';
+import { Res, Transaction } from '@/types';
 import { Register } from '@tanstack/react-query';
 import axios, { AxiosInstance, isAxiosError } from 'axios';
 import type { Session } from 'next-auth';
@@ -93,6 +93,10 @@ export const testAlert = async (widgetId: string) => {
 
 export const restartWidget = async (widgetId: string) => {
   return await ApiClient().post<Res<string>>(`/streamer/widget/refresh/trigger/${widgetId}`);
+};
+
+export const getTransactions = async () => {
+  return (await ApiClient().get<Res<{ items: Transaction[]; totalCount: number }>>('/transactions')).data.data;
 };
 
 export default ApiClient();

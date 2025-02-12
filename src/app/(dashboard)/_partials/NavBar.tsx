@@ -23,45 +23,57 @@ export const NavBar = () => {
   });
 
   return (
-    <nav className="flex min-h-screen w-[15%] flex-col items-start justify-start gap-8 bg-secondaryColor p-4 font-medium text-green-50 transition-all">
-      <div className="flex flex-row items-center justify-start gap-2">
-        {streamer?.logoUrl && (
-          <Image src={streamer.logoUrl} className="rounded-full" width={40} height={40} alt="Streamer Logo" />
-        )}
-        <h1 className="text-xl font-bold">{streamer?.username}</h1>
+    <nav className="flex h-screen w-[20%] flex-col items-start justify-start bg-secondaryColor px-4 py-8 font-medium text-green-50 transition-all">
+      <div className="flex h-full flex-col items-start justify-start gap-8">
+        <div className="flex flex-row items-center justify-start gap-2">
+          {streamer?.logoUrl && (
+            <Image
+              src={streamer.logoUrl}
+              className="rounded-full bg-white"
+              width={40}
+              height={40}
+              alt="Streamer Logo"
+            />
+          )}
+          <h1 className="text-xl font-bold">{streamer?.username}</h1>
+        </div>
+        <div className="flex flex-col items-start justify-start gap-6">
+          <div className="jusstify-start flex items-center gap-2">
+            <MdDashboard scale={15} />
+            <Link
+              href="/dashboard"
+              className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
+              Dashboard
+            </Link>
+          </div>
+          <div className="jusstify-start flex items-center gap-2">
+            <FaTachographDigital scale={15} />
+            <Link
+              href="/widgets"
+              className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
+              Widgets
+            </Link>
+          </div>
+          <div className="jusstify-start flex items-center gap-2">
+            <FaUserCircle scale={15} />
+            <Link
+              href="/profile"
+              className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
+              Profile
+            </Link>
+          </div>
+          <div className="jusstify-start flex items-center gap-2">
+            <IoMdHelpCircle scale={15} />
+            <Link
+              href="/help"
+              className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
+              Help
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col items-start justify-start gap-6">
-        <div className="jusstify-start flex items-center gap-2">
-          <MdDashboard scale={15} />
-          <Link
-            href="/dashboard"
-            className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
-            Dashboard
-          </Link>
-        </div>
-        <div className="jusstify-start flex items-center gap-2">
-          <FaTachographDigital scale={15} />
-          <Link
-            href="/widgets"
-            className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
-            Widgets
-          </Link>
-        </div>
-        <div className="jusstify-start flex items-center gap-2">
-          <FaUserCircle scale={15} />
-          <Link
-            href="/profile"
-            className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
-            Profile
-          </Link>
-        </div>
-        <div className="jusstify-start flex items-center gap-2">
-          <IoMdHelpCircle scale={15} />
-          <Link href="/help" className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
-            Help
-          </Link>
-        </div>
-      </div>
+
+      <Image src={'/white-logo.svg'} width={100} height={100} alt="Fliz Logo" />
     </nav>
   );
 };
