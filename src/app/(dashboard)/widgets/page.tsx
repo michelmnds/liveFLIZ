@@ -63,7 +63,7 @@ export default function WidgetsPage() {
         <div className="flex flex-row items-start justify-center gap-5">
           <div className="flex flex-col items-start justify-center gap-1">
             <h1 className="text-xl font-medium text-gray-500">Alert</h1>
-            <div className="flex w-full flex-col items-center justify-center gap-8 rounded-lg bg-gray-100 p-8">
+            <div className="flex w-full flex-col items-center justify-center gap-8 rounded-lg border bg-gray-100 p-8">
               <div className="flex w-full flex-col items-center justify-center gap-2 text-center font-sans text-3xl text-white [text-shadow:_0px_0px_4px_rgba(0,0,0,0.7)]">
                 <Image src="/FLIZLogo.png" width={68} height={68} alt="Fliz Logo" />
                 <span className="m-0 p-0 text-[#80ed99]">{`${streamer?.username} donated 5,00 €`}</span>
@@ -124,7 +124,7 @@ export default function WidgetsPage() {
           </div>
           <div className="flex flex-col items-start justify-center gap-1">
             <h1 className="text-xl font-medium text-gray-500">QRCODE</h1>
-            <div className="flex w-full flex-col items-center justify-center gap-8 rounded-lg bg-gray-100 p-8">
+            <div className="flex w-full flex-col items-center justify-center gap-8 rounded-lg border bg-gray-100 p-8">
               {streamer?.widgets?.qrc_id && (
                 <iframe
                   src={`http://localhost:8080/streamer/widget/qrc/${streamer.widgets.qrc_id}`}

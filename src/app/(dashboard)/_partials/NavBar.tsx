@@ -23,7 +23,7 @@ export const NavBar = () => {
   });
 
   return (
-    <nav className="flex h-screen w-[20%] flex-col items-start justify-start bg-secondaryColor px-4 py-8 font-medium text-green-50 transition-all">
+    <nav className="flex h-screen w-[20%] flex-col items-start justify-start bg-secondaryColor p-8 font-medium text-green-50 transition-all">
       <div className="flex h-full flex-col items-start justify-start gap-8">
         <div className="flex flex-row items-center justify-start gap-2">
           {streamer?.logoUrl && (
@@ -72,7 +72,6 @@ export const NavBar = () => {
           </div>
         </div>
       </div>
-
       <Image src={'/white-logo.svg'} width={100} height={100} alt="Fliz Logo" />
     </nav>
   );
