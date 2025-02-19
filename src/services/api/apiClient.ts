@@ -77,7 +77,12 @@ export const register = async (data: Omit<Register, 'confirmPassword'>) => {
 };
 
 export const getStreamer = async () => {
-  const response = await ApiClient().get<Res<StreamerType>>('/streamer/');
+  const response = await ApiClient().get<Res<Partial<StreamerType>>>('/streamer/');
+  return response.data.data;
+};
+
+export const getStreamerByUsername = async (username: string) => {
+  const response = await ApiClient().get<Res<StreamerType>>(`/streamer/${username}`);
   return response.data.data;
 };
 

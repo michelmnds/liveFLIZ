@@ -16,6 +16,24 @@ export const formatAmount = (amount: number, language?: string, opposite = false
 
   return localeAmount;
 };
+interface Props {
+  amount: string | number | undefined;
+  locale: string;
+  grouping: boolean;
+  decimals: number;
+  currency?: boolean;
+}
+
+export const formatAmountByLanguage = ({ amount, locale, grouping, decimals, currency }: Props) => {
+  const formatter = new Intl.NumberFormat(locale, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+    useGrouping: grouping,
+    currency: 'EUR',
+    style: currency ? 'currency' : 'decimal'
+  });
+  return formatter.format(Number(amount));
+};
 
 // HELPS TO AVOID RECEIVING NaN WHEN TRYING TO CONVERT ANY AMOUNT TO JS NUMBERS (64-bit floating-point numbers)
 export const convertAmountToJSNumber = ({

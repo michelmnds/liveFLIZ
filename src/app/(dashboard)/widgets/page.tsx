@@ -31,9 +31,10 @@ export default function WidgetsPage() {
       }
     }
   });
+
   const handleAlertTest = async () => {
     try {
-      await testAlert(streamer?.widgets.alert_id || '');
+      await testAlert(streamer?.widgets?.alert_id || '');
     } catch (error) {
       console.error(error);
     }
@@ -44,13 +45,13 @@ export default function WidgetsPage() {
 
     switch (iconClicked) {
       case 'qrc-restart':
-        await restartWidget(streamer?.widgets.qrc_id || '');
+        await restartWidget(streamer?.widgets?.qrc_id || '');
         break;
       case 'alert-play':
         await handleAlertTest();
         break;
       case 'alert-restart':
-        await restartWidget(streamer?.widgets.alert_id || '');
+        await restartWidget(streamer?.widgets?.alert_id || '');
         break;
     }
   };
@@ -83,7 +84,7 @@ export default function WidgetsPage() {
                     <AlertDialogDescription className="text-lg text-secondaryColor">
                       Use the URL below in your streaming software (OBS, Twitch Studio, etc.) as a Browser Source.
                     </AlertDialogDescription>
-                    <UrlField url={`http://localhost:8080/streamer/widget/alert/${streamer?.widgets.alert_id}`} />
+                    <UrlField url={`http://localhost:8080/streamer/widget/alert/${streamer?.widgets?.alert_id}`} />
                     <div className="flex w-full flex-col items-start justify-center gap-1 px-2 text-secondaryColor">
                       <h1 className="text-lg text-secondaryColor">Recommended Size</h1>
                       <div className="flex w-full flex-row items-center justify-start gap-10">
@@ -113,7 +114,7 @@ export default function WidgetsPage() {
                     id="alert-restart"
                     size={18}
                     className="cursor-pointer text-secondaryColor"
-                    onClick={() => restartWidget(streamer?.widgets.alert_id || '')}
+                    onClick={() => restartWidget(streamer?.widgets?.alert_id || '')}
                   />
                 </Tooltip>
                 <Tooltip content="Coming soon" side="bottom">
@@ -154,7 +155,7 @@ export default function WidgetsPage() {
                       <AlertDialogDescription className="text-lg text-secondaryColor">
                         Use the URL below in your streaming software (OBS, Twitch Studio, etc.) as a Browser Source.
                       </AlertDialogDescription>
-                      <UrlField url={`http://localhost:8080/streamer/widget/qrc/${streamer?.widgets.qrc_id}`} />
+                      <UrlField url={`http://localhost:8080/streamer/widget/qrc/${streamer?.widgets?.qrc_id}`} />
                       <div className="flex w-full flex-col items-start justify-center gap-1 px-2 text-secondaryColor">
                         <h1 className="text-lg text-secondaryColor">Recommended Size</h1>
                         <div className="flex w-full flex-row items-center justify-start gap-10">

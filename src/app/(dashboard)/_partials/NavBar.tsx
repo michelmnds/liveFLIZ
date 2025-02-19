@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { FaUserCircle } from 'react-icons/fa';
 import { FaTachographDigital } from 'react-icons/fa6';
 import { IoMdHelpCircle } from 'react-icons/io';
-
 import { MdDashboard } from 'react-icons/md';
+import { RiPagesFill } from 'react-icons/ri';
 
 export const NavBar = () => {
   const { data: streamer } = useQuery({
@@ -60,6 +60,14 @@ export const NavBar = () => {
               href="/profile"
               className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
               Profile
+            </Link>
+          </div>
+          <div className="jusstify-start flex items-center gap-2">
+            <RiPagesFill scale={15} />
+            <Link
+              href={`/${streamer?.username}`}
+              className="flex flex-row items-center justify-start gap-2 transition-all hover:text-white">
+              Preview
             </Link>
           </div>
           <div className="jusstify-start flex items-center gap-2">

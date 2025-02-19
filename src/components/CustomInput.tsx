@@ -22,7 +22,7 @@ export const CustomInput = forwardRef<HTMLInputElement, CustomInputProps>(
         <input
           ref={ref}
           type={isSecure ? 'password' : 'text'}
-          className={`w-full rounded-md bg-gray-200 px-3 py-3 text-sm placeholder-gray-400 focus:outline-none ${inputClassName || ''} `}
+          className={`text-blue-80 w-full rounded-md bg-gray-200 px-3 py-3 text-sm placeholder-gray-400 focus:outline-none ${inputClassName || ''} `}
           onChange={e => setValue(e.target.value)}
           {...props}
         />
