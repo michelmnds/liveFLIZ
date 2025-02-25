@@ -30,11 +30,68 @@
         "search": "Suchen..."
       }
     },
+    "footer": {
+      "company": {
+        "title": "Unternehmen",
+        "careers": "Karriere"
+      },
+      "products": {
+        "title": "Nutzer",
+        "customers": "Privatkunden",
+        "companies": "Firmen",
+        "developers": "Entwickler"
+      },
+      "support": {
+        "title": "Support",
+        "help": "Kontakt"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "imprint": "Impressum",
+        "privacy": "Datenschutzerklärung",
+        "terms": "AGB"
+      },
+      "copyright": "© 2025 FLIZpay GmbH. Alle Rechte vorbehalten.",
+      "sepaNote": "Die Verwendung des SEPA-Zeichens erfolgt unter Lizenz des European Payments Council AISBL."
+    },
     "landingPage": {
-      "title": {
-        "earnCashback": "Pssst... bei Zahlungen mit FLIZ erhältst du Cashback. Warum?  →",
-        "feeFree": "Zahlungsmethoden sind teuer. FLIZ kostet nichts und Firmen teilen die gesparten Gebühren mit dir als Cashback.",
-        "protection": "Außerdem bieten wir den besten Schutz für deine Zahlungen und Daten."
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "subtitle": "Alles, was du über FLIZpay wissen musst",
+        "question": {
+          "1": "Wie integriere/installiere ich FLIZ?",
+          "2": "Wie funktioniert Cashback?",
+          "3": "Kann ich mit FLIZ auch bargeldlose Zahlungen vor Ort annehmen?",
+          "4": "Muss ich meinen aktuellen Zahlungsdienstleister wechseln?",
+          "5": "Wie kann ich FLIZpay testen?",
+          "6": "Wozu verpflichte ich mich mit FLIZ?",
+          "7": "FLIZ ist kostenlos. Wie verdient ihr dann Geld?",
+          "8": "Wie sicher ist FLIZ?",
+          "9": "Haben Instant SEPA Überweisungen etwas mit SEPA Lastschriften zu tun?",
+          "10": "Wie funktionieren Zahlungen mit FLIZpay?",
+          "11": "Welche Voraussetzungen müssen Konsumenten für Zahlungen mit FLIZpay erfüllen?",
+          "12": "Kann ich als Unternehmen mit FLIZ bezahlen?",
+          "13": "Welche Beziehung hat FLIZpay zu DaoPay?",
+          "14": "Was passiert, sollte FLIZpay insolvent werden?",
+          "15": "Wie laufen Chargebacks ab?"
+        },
+        "awnser": {
+          "1": "Es war noch nie leichter, Zahlungen anzunehmen. Du könntest innerhalb der nächsten 5 Minuten deine erste FLIZ Zahlung erhalten. Dank unserer Plugins benötigst du kein technisches Wissen für die Installation. FLIZ bietet fertige und sofort einsatzbereite Integrationen mit Shopsoftware im E-Commerce. Außerdem ist eine individuelle Integration über unsere standardisierte API möglich (siehe mehr auf unserer Seite für Entwickler). Erstelle dein Firmenkonto und folge den Schritten zur Installation.",
+          "2": "Cashback wird von Einkäufen abgezogen, die deine Kunden mit FLIZ bezahlen. Diese Funktion ist optional. Wenn du Cashback anbieten möchtest, kannst du den Betrag in deinem Firmenkonto festlegen. Du kannst frei wählen, wie viel Cashback du gibst, und du kannst die Cashback-Funktion jederzeit in deinem Firmenkonto aktivieren oder deaktivieren. Aktuell steht Cashback ausschließlich für WooCommerce Shops zur Verfügung.",
+          "3": "Ja. Sobald du dich für ein Firmenkonto anmeldest, kannst du unsere App nutzen, um Zahlungen persönlich entgegenzunehmen. Du kannst außerdem Unterkonten für deine Mitarbeiter einrichten, sodass sie FLIZ-Zahlungen annehmen und Zahlungsbestätigungen auf ihren Handys erhalten. Aber das ist noch nicht alles – unsere QR-Codes lassen sich auch in gedruckter Form verwenden.",
+          "4": "Nein, du musst deinen aktuellen Zahlungsdienstleister nicht wechseln. FLIZ ist eine eigenständige gebührenfreie Zahlungsmethode, die deine bestehenden Zahlungsoptionen ergänzt, ohne sie notwendigerweise zu ersetzen. Wenn du weiterhin Zahlungsmethoden anbieten möchtest, die Gebühren verlangen, kannst du natürlich alles so belassen, wie es ist - und FLIZ hinzufügen. Um jedoch Einsparungen für alle zu optimieren, empfehlen wir, FLIZ als erste Wahl für deine Kunden anzubieten.",
+          "5": "Wir bieten aktuell keine Testversion an. FLIZpay kann aber in jedem Staging-Environment installiert werden. Im Fall von Zahlungen vor Ort kann die FLIZpay-App installiert und mit einem Firmenkonto genutzt werden. Egal wo, es werden dabei immer echte Zahlungen ermöglicht. Daher empfehlen wir, im FLIZpay-Firmenkonto aus Buchhaltungsgründen eine private IBAN für Tests zu hinterlegen und anschließend mit einem privaten FLIZpay-Konto über die App zu zahlen, z. B. einen Cent. Achtet darauf, dass ihr zum Zahlen ein privates FLIZpay-Konto nutzt, da mit FLIZpay-Firmenkonten nicht gezahlt werden kann.",
+          "6": "FLIZ ist kostenlos und es gibt keine Mindestvertragslaufzeit. Unabhängig vom Zahlungsvolumen kannst du FLIZpay installieren und jederzeit wieder deinstallieren. Zahlungen gehen einzeln und sofort auf dein bestehendes Bankkonto ein, sodass es keine Einschränkungen gibt.",
+          "7": "FLIZ operiert unabhängig von der komplexen Marktstruktur, auf die sich alle anderen Zahlungsmethoden stützen. Das ermöglicht es uns, Transaktionen ohne direkte Kosten durchzuführen und so Zahlungen gebührenfrei zu halten. In Zukunft werden wir zusätzlich zum Zahlungsverkehr kostenpflichtige Produkte einführen, die unseren Kunden einen Mehrwert bieten.",
+          "8": "Sicherheit hat bei allen finanziellen Belangen höchste Priorität, daher haben wir FLIZ zu einem der sichersten Zahlungssysteme entwickelt. Wenn deine Kunden FLIZ verwenden, nutzen sie im Hintergrund die standardisierten Online-Banking-Verfahren ihrer Bank. Alle Datenübertragungen erfolgen über vollständig verschlüsselte Verbindungen, was höchste Sicherheit gewährleistet.",
+          "9": "Nein. Instant SEPA Überweisungen sind sekundenschnelle Banküberweisungen, die über das Netzwerk des einheitlichen Euro-Zahlungsverkehrsraums abgewickelt werden (abgekürzt SEPA für Single Euro Payments Area). Lastschriften hingegen laufen zwar grundsätzlich über das gleiche Netzwerk (SEPA), werden jedoch von der Empfängerseite ausgelöst und haben daher ein 8-wöchiges Rückgaberecht für die Zahlenden. Da Instant-SEPA-Überweisungen von der zahlenden Seite ausgelöst werden, gibt es kein Rückgaberecht.",
+          "10": "Entweder klicken Konsumenten auf einen Link (z.B. einen Zahlungsbutton) und landen direkt in der FLIZpay-App, oder sie scannen einen QR-Code mit ihrem Smartphone beziehungsweise direkt in der FLIZpay-App. Der Zahlungsprozess ist anschließend in beiden Fällen derselbe. Wenn die FLIZpay-App noch nicht installiert ist, erkennt unser System dies und führt die Nutzer in einen etwa einminütigen Onboarding-Prozess. Nachdem die Zahlung in der App bestätigt wurde, löst FLIZpay im Hintergrund eine Instant SEPA Überweisung direkt vom Bankkonto der Nutzer aus. Das Geld wird direkt auf das hinterlegte Bankkonto des Unternehmens überwiesen – FLIZpay berührt das Geld dabei zu keinem Zeitpunkt. Bis Oktober 2025 gibt es eine sehr kleine Anzahl an Banken, die keine Instant SEPA Überweisungen unterstützen. In diesem Fall löst FLIZpay eine Standard SEPA Überweisung aus.",
+          "11": "Sie müssen sich lediglich in der FLIZpay App anmelden und können dort Ihr bestehendes Bankkonto hinterlegen (alle deutschen Banken und populäre ausländische Banken stehen zur Verfügung). Eine zusätzliche Karte oder ein Aufladen der App ist nicht erforderlich.",
+          "12": "FLIZ ist derzeit für Zahlungen von Privatkunden konzipiert. Eine eigene Lösung für Business-to-Business-Zahlungen bauen wir ggf. später.",
+          "13": "Wir nutzen digitale Zertifikate der DaoPay GmbH, um uns bei Banken zu verifizieren. Daher bekommen Zahlende teilweise den Namen “DaoPay GmbH” von ihrer Bank angezeigt.",
+          "14": "Zwar würde FLIZpay dann nicht mehr angeboten, jedoch wurden alle vergangenen Zahlungen dank der Abwicklungsgeschwindigkeit in Echtzeit bereits einzeln verarbeitet, weshalb für Unternehmen und Konsumenten kein Risiko entsteht.",
+          "15": "FLIZpay bietet aktuell keine Chargebacks an."
+        }
       }
     },
     "loginScreen": {

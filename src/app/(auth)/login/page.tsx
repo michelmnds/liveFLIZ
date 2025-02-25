@@ -8,6 +8,7 @@ import { useMutation } from '@tanstack/react-query';
 import { signIn } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Controller, useForm } from 'react-hook-form';
 
@@ -77,9 +78,9 @@ export default function LoginPage() {
           <Button type="submit">{t('Labels.common.button.login')}</Button>
           <div className="ml-1 text-start text-xs text-grey80">
             <span>Don&apos;t have an account? </span>
-            <span className="cursor-pointer underline" onClick={() => router.push('/login')}>
+            <Link className="cursor-pointer underline" href="/register">
               Create one.
-            </span>
+            </Link>
           </div>
         </div>
       </form>

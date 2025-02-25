@@ -8,6 +8,7 @@ import { valibotResolver } from '@hookform/resolvers/valibot';
 import { useMutation } from '@tanstack/react-query';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Controller, useForm } from 'react-hook-form';
 
@@ -113,9 +114,9 @@ export default function RegisterPage() {
           <Button type="submit">{t('Labels.common.button.createAccount')}</Button>
           <div className="ml-1 text-start text-xs text-grey80">
             <span>Already have an account? </span>
-            <span className="cursor-pointer underline" onClick={() => router.push('/login')}>
+            <Link className="cursor-pointer underline" href="/login">
               Click here to login.
-            </span>
+            </Link>
           </div>
         </div>
       </form>
