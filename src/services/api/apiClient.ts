@@ -76,6 +76,10 @@ export const register = async (data: Omit<Register, 'confirmPassword'>) => {
   return response.data.data.token;
 };
 
+export const deleteStreamer = async () => {
+  return await ApiClient().delete<Res<null>>('/auth/delete-user');
+};
+
 export const getStreamer = async () => {
   const response = await ApiClient().get<Res<Partial<StreamerType>>>('/streamer/');
   return response.data.data;
@@ -100,8 +104,30 @@ export const restartWidget = async (widgetId: string) => {
   return await ApiClient().post<Res<string>>(`/streamer/widget/refresh/trigger/${widgetId}`);
 };
 
+export const editStreamer = async (data: Partial<StreamerType>) => {
+  const response = await ApiClient().patch<Res<StreamerType>>('/streamer/', data);
+  return response.data.data;
+};
+
 export const getTransactions = async () => {
   return (await ApiClient().get<Res<{ items: Transaction[]; totalCount: number }>>('/transactions')).data.data;
+};
+
+export const updateLogoUrl = async (logoUrl: string) => {
+  const response = await ApiClient().patch<Res<{ logoUrl: string }>>('/streamer/update-logo-url', { logoUrl });
+  return response.data.data.logoUrl;
+};
+
+export const generatePresignedUrl = async (fileName: string, contentType: string) => {
+  const response = await ApiClient().get<Res<{ url: string }>>('/streamer/generate-presigned-url', {
+    params: { fileName, contentType }
+  });
+
+  return response.data.data.url;
+};
+
+export const deletePresignedUrl = async (fileName: string) => {
+  return ApiClient().delete(`/streamer/delete-logo?fileName=${fileName}`);
 };
 
 export default ApiClient();

@@ -68,7 +68,7 @@ export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
   asChild?: boolean;
 }
 
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ asChild, type, loading, variant, color, size, roundness, className, ...props }, ref) => {
     const Comp = asChild ? Slot : 'button';
 
@@ -92,3 +92,4 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 Button.displayName = 'Button';
+export { Button, buttonVariants };

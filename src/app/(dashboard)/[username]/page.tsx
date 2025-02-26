@@ -138,7 +138,7 @@ export default function Preview() {
                   )}
                   control={control}
                 />
-                <p className="text-xs text-gray-500">Minimum ammount is ?</p>
+                <p className="text-xs text-gray-500">Minimum amount is ?</p>
               </div>
             </label>
           </div>

@@ -1,12 +1,12 @@
+import { Providers } from '@/providers/Providers';
 import { cn } from '@/utils/cn';
-import { Theme } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import type { Metadata } from 'next';
+import { getSession } from 'next-auth/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Geist, Geist_Mono } from 'next/font/google';
 import '../styles/globals.css';
-import { ReactQueryProvider } from './ReactQueryProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -30,14 +30,13 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
   const messages = await getMessages();
+  const session = await getSession();
 
   return (
     <html lang={locale}>
       <body className={cn(geistSans.variable, geistMono.variable, 'antialiased')}>
         <NextIntlClientProvider messages={messages}>
-          <Theme>
-            <ReactQueryProvider>{children}</ReactQueryProvider>
-          </Theme>
+          <Providers session={session}>{children}</Providers>
         </NextIntlClientProvider>
       </body>
     </html>
