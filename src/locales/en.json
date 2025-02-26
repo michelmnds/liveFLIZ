@@ -63,34 +63,14 @@
           "2": "How does cashback work?",
           "3": "Is FLIZ available for in-person payments?",
           "4": "Do I need to change my current payment provider",
-          "5": "How can I test FLIZpay?",
-          "6": "Is there are minimum contract period?",
-          "7": "It's free, so how does FLIZ make money?",
-          "8": "How secure is FLIZ?",
-          "9": "Do Instant SEPA transfers have anything to do with SEPA direct debits?",
-          "10": "How do payments with FLIZpay work?",
-          "11": "What do consumers need in order to use FLIZpay?",
-          "12": "Can I pay with FLIZ as a company?",
-          "13": "What is FLIZpay’s relationship with DaoPay?",
-          "14": "What happens if FLIZpay becomes insolvent?",
-          "15": "How do chargebacks work?"
+          "5": "How can I test FLIZpay?"
         },
-        "awnser": {
+        "answer": {
           "1": "There is no easier way to start accepting payments. You need no technical knowledge with our plugins. FLIZ has ready-to-use integrations with e-commerce platforms and a standardized API for custom integration (for the latter, see more on our page for developers). Create your company account and follow the steps to install FLIZ. You can receive your first payment in less than one hour.",
           "2": "Cashback is deducted from purchases that your customers make with FLIZ. This feature is optional. If you choose to offer cashback, you can define the amount in your company account. You are free to choose how much cashback you give, and you can activate and deactivate the cashback feature whenever you like from your company account. Currently, cashback is only available for WooCommerce shops.",
           "3": "Yes. Once you sign up for a company account, you can use our app to accept in-person payments. You can also assign sub-accounts to employees, enabling them to accept FLIZ payments and receive payment confirmations on their phones. But that’s not all - our QR codes can also be used in printed form.",
           "4": "No, you don't need to change your current payment provider. FLIZ is a standalone, fee-free payment method that complements your existing payment options without necessarily replacing them. If you wish to continue offering payment methods that charge fees, you can keep your current setup as is. However, to optimize savings for everyone, we recommend featuring FLIZ as the first choice for your customers.",
-          "5": "We currently don’t offer a dedicated test version. However, FLIZpay can be installed in any staging environment. For in-person payments, you can simply install the FLIZpay app and link it to your company account. No matter where you use it, payments are always processed for real. For accounting purposes, we recommend adding a private IBAN to your FLIZpay company account and then making a small test payment - like one cent - from a private FLIZpay account via the app. Just remember to use a personal FLIZpay account to pay, because you can’t make payments with a FLIZpay company account.",
-          "6": "No, there is no contract or commitment period. FLIZ is free and you can start anytime. Regardless of your transaction volume, you can install FLIZpay at any time - and uninstall it whenever you want. Payments are credited individually and instantly to your existing bank account, so there are no limitations.",
-          "7": "FLIZ operates independently from the complex market setup that all other payment methods rely on. This allows us to process transactions without incurring direct costs and to keep payments fee-free. In addition to plain payments, we will introduce value-added products that will be offered for a price.",
-          "8": "Security is of utmost importance in all financial matters, which is why we developed FLIZ to be one of the safest payment systems available. When using FLIZ, your customers utilize their bank's standard online banking procedures in the background. All data transmission occurs through fully encrypted connections, ensuring the highest level of security.",
-          "9": "No. Instant SEPA transfers are very fast bank transfers handled through the Single Euro Payments Area (SEPA) network. SEPA direct debits, on the other hand, also run through this network but are initiated by the receiving party - giving payers an eight-week window to request a refund. Since Instant SEPA transfers are triggered by the paying party, there’s no refund option.",
-          "10": "Customers can either click a payment link (e.g., a “Pay Now” button) that directs them to the FLIZpay app or scan a QR code with their smartphone - from within the FLIZpay app or a separate scanning tool. The payment process then follows the same steps in both scenarios. If a customer has not yet installed FLIZpay, the system automatically detects this and guides them through a quick, one-minute onboarding. Once they confirm the payment, FLIZpay initiates an Instant SEPA transfer from the customer’s bank account in the background. The funds go directly to the company’s linked bank account - FLIZpay never holds or processes the money itself. Until October 2025, a small number of banks may not support Instant SEPA transfers. In such cases, FLIZpay simply falls back on a standard SEPA transfer.",
-          "11": "They simply sign up in the FLIZpay app and connect their existing bank account (all German banks and popular foreign banks are supported). No extra card or topping up the app is necessary.",
-          "12": "FLIZ is currently designed for payments by private customers. A dedicated solution for business-to-business payments may be added in the future.",
-          "13": "We use digital certificates from DaoPay GmbH to verify ourselves with banks. As a result, payers may sometimes see “DaoPay GmbH” displayed by their bank.",
-          "14": "While FLIZpay would no longer be available, all previous payments would already have been processed in real time. This means there’s no risk for businesses or consumers.",
-          "15": "Currently, FLIZpay does not offer chargebacks."
+          "5": "We currently don’t offer a dedicated test version. However, FLIZpay can be installed in any staging environment. For in-person payments, you can simply install the FLIZpay app and link it to your company account. No matter where you use it, payments are always processed for real. For accounting purposes, we recommend adding a private IBAN to your FLIZpay company account and then making a small test payment - like one cent - from a private FLIZpay account via the app. Just remember to use a personal FLIZpay account to pay, because you can’t make payments with a FLIZpay company account."
         }
       }
     },

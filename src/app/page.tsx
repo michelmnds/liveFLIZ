@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-start gap-5xl md:gap-[100px]">
       <Header />
-      <div className="mb-[100px] flex w-full flex-col items-center justify-start gap-5xl px-xl text-secondaryColor md:gap-[100px]">
+      <div className="flex w-full flex-col items-center justify-start gap-5xl px-xl text-secondaryColor md:gap-[100px]">
         <div className="mx-auto flex w-full flex-col items-center justify-center gap-2xl lg:flex-row">
           <div className="flex flex-col items-center justify-center gap-4 px-xl md:items-start md:gap-8 lg:max-w-[50%]">
             <Typography type="h1">Discover the future of content monetization.</Typography>

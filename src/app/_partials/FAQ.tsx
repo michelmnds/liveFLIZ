@@ -2,27 +2,15 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { useTranslations } from 'next-intl';
 
 export function FAQSection() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const t = useTranslations();
 
-  // Manually create the FAQ items array using the data we know exists
-  const faqItems = [];
-
-  // Try to populate 15 items - we know from your JSON there are 15 questions
-  for (let i = 1; i <= 15; i++) {
-    try {
-      const question = t(`Labels.landingPage.faq.question.${i}`);
-      const answer = t(`Labels.landingPage.faq.awnser.${i}`);
-
-      // Only add if both question and answer are valid strings
-      if (typeof question === 'string' && typeof answer === 'string') {
-        faqItems.push({ id: i, question, answer });
-      }
-    } catch (e) {
-      // Skip any items that cause translation errors
-      console.error(`Error loading FAQ item ${i}:`, e);
-    }
-  }
+  const faqItems = [
+    { question: t('Labels.landingPage.faq.question.1'), answer: t('Labels.landingPage.faq.answer.1') },
+    { question: t('Labels.landingPage.faq.question.2'), answer: t('Labels.landingPage.faq.answer.2') },
+    { question: t('Labels.landingPage.faq.question.3'), answer: t('Labels.landingPage.faq.answer.3') },
+    { question: t('Labels.landingPage.faq.question.4'), answer: t('Labels.landingPage.faq.answer.4') },
+    { question: t('Labels.landingPage.faq.question.5'), answer: t('Labels.landingPage.faq.answer.5') }
+  ];
 
   return (
     <section className="bg-background w-full py-24">
@@ -35,9 +23,9 @@ export function FAQSection() {
         </div>
         <div className="mx-auto max-w-3xl">
           <Accordion type="single" collapsible className="w-full">
-            {faqItems.map(item => (
-              <div key={item.id}>
-                <AccordionItem value={`item-${item.id}`}>
+            {faqItems.map((item, index) => (
+              <div key={index}>
+                <AccordionItem value={`item-${index}`}>
                   <AccordionTrigger className="text-start text-lg font-medium">{item.question}</AccordionTrigger>
                   <AccordionContent className="text-muted-foreground text-start">{item.answer}</AccordionContent>
                 </AccordionItem>
