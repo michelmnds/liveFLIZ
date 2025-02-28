@@ -6,7 +6,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="flex min-h-screen w-full items-start justify-start gap-10">
       <NavBar />
-      <main>{children}</main>
+      <main className="min-h-screen w-full">{children}</main>
     </div>
   );
 }

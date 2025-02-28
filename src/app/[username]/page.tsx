@@ -56,7 +56,7 @@ export default function DonationPage() {
 
   const handleContinue = (data?: { message: string; amount: string; username: string }) => {
     const { formattedNumber } = convertAmountToJSNumber({ amount: data?.amount ?? '', isGermanSelected: false });
-    const urlParams = `f=${streamer?.flizKey},e=${data?.message ?? ''},a=${formattedNumber},o=${formattedNumber},u=${data?.username},s=app_qrc`;
+    const urlParams = `f=${streamer?.flizKey},e=${data?.message ?? ''},a=${formattedNumber},o=${formattedNumber},u=${data?.username},s=${isMobile ? 'streamer_deeplink' : 'streamer_qrc'}`;
     const url = `${CHECKOUT_URL}?token=${Buffer.from(urlParams).toString('base64')}`;
 
     if (isMobile) return router.push(url);
@@ -71,7 +71,7 @@ export default function DonationPage() {
   };
 
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-start justify-start gap-10">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center gap-10">
       <header className="absolute left-10 top-10">
         <Link href="/dashboard">
           <IoMdArrowRoundBack color="var(--secondaryColor)" size={30} />
