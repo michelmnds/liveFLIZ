@@ -1,7 +1,6 @@
 'use client';
 
-import { getStreamer } from '@/services/api/apiClient';
-import { useQuery } from '@tanstack/react-query';
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaUserCircle } from 'react-icons/fa';
@@ -11,16 +10,8 @@ import { MdDashboard } from 'react-icons/md';
 import { RiPagesFill } from 'react-icons/ri';
 
 export const NavBar = () => {
-  const { data: streamer } = useQuery({
-    queryKey: ['streamer'],
-    queryFn: () => {
-      try {
-        return getStreamer();
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  });
+  const { data: session } = useSession();
+  const streamer = session?.user;
 
   return (
     <nav className="flex h-screen w-[20%] flex-col items-start justify-start bg-secondaryColor p-8 font-medium text-green-50 transition-all">

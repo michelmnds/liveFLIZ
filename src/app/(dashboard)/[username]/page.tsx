@@ -27,7 +27,7 @@ import { isMobile } from 'react-device-detect';
 import { Controller, useForm } from 'react-hook-form';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 
-export default function Preview() {
+export default function DonationPage() {
   const t = useTranslations();
   const router = useRouter();
   const [qrcValue, setQrcValue] = useState('');

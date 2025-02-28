@@ -106,7 +106,9 @@ export function Footer() {
 
         <div className="border-t pt-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-            <div className="text-muted-foreground text-sm">{t('Labels.footer.copyright')}</div>
+            <div className="text-muted-foreground text-sm">
+              {t('Labels.footer.copyright', { year: new Date().getFullYear() })}
+            </div>
             <div className="text-muted-foreground flex items-center space-x-2 text-sm">
               <SiSepa className="h-6 w-6" />
               <span>{t('Labels.footer.sepaNote')}</span>

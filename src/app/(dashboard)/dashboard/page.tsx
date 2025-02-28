@@ -1,21 +1,22 @@
 'use client';
 
 import { getTransactions } from '@/services/api/apiClient';
-import { useQuery } from '@tanstack/react-query';
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import { NavBar } from '../_partials/NavBar';
 
 export default function DashboardPage() {
   const { data: transactions } = useQuery({
     queryKey: ['transactions'],
-    queryFn: () => {
+    queryFn: async () => {
       try {
-        return getTransactions();
+        return await getTransactions();
       } catch (error) {
         console.error(error);
       }
     },
-    select: data => data?.items
+    select: data => data?.items,
+    placeholderData: keepPreviousData
   });
 
   const totalTransactionsAmount = useMemo(() => {

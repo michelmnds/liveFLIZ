@@ -14,7 +14,8 @@ export const streamerSchema = object({
   widgets: object({
     qrc_id: optional(string()),
     alert_id: optional(string())
-  })
+  }),
+  transactions: optional(object({}))
 });
 
 export type StreamerType = InferOutput<typeof streamerSchema>;

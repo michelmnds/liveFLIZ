@@ -30,8 +30,8 @@ function ApiClient(): AxiosInstance {
         session = await getSession();
       }
 
-      if (session && session.user.token) {
-        request.headers.Authentication = `Bearer ${session.user.token}`;
+      if (session) {
+        request.headers.Authentication = `Bearer ${session.token}`;
       }
 
       return request;

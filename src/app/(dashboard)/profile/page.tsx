@@ -5,9 +5,10 @@ import { CustomInput } from '@/components/CustomInput';
 import { Typography } from '@/components/Typography';
 import { ProfilePictuteProvider } from '@/providers/ProfilePictureProvider';
 import { editProfileSchema } from '@/schemas/editProfile.schema';
-import { editStreamer, getStreamer } from '@/services/api/apiClient';
+import { editStreamer } from '@/services/api/apiClient';
 import { valibotResolver } from '@hookform/resolvers/valibot';
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation } from '@tanstack/react-query';
+import { useSession } from 'next-auth/react';
 import { useTranslations } from 'next-intl';
 import { Controller, useForm } from 'react-hook-form';
 import { toast } from 'sonner';
@@ -16,17 +17,8 @@ import { ProfilePicture } from './_partials';
 
 export default function ProfilePage() {
   const t = useTranslations();
-
-  const { data: streamer } = useQuery({
-    queryKey: ['streamer'],
-    queryFn: () => {
-      try {
-        return getStreamer();
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  });
+  const { data: session } = useSession();
+  const streamer = session?.user;
 
   const { mutate } = useMutation({
     mutationFn: editStreamer,

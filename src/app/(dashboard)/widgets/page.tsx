@@ -9,9 +9,9 @@ import {
   AlertDialogTrigger
 } from '@/components/AlertDialog';
 import { UrlField } from '@/components/UrlField';
-import { getStreamer, restartWidget, testAlert } from '@/services/api/apiClient';
+import { restartWidget, testAlert } from '@/services/api/apiClient';
 import { Tooltip } from '@radix-ui/themes';
-import { useQuery } from '@tanstack/react-query';
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import React from 'react';
 import { FaCirclePlay } from 'react-icons/fa6';
@@ -21,16 +21,8 @@ import { MdOutlineReplay } from 'react-icons/md';
 import { NavBar } from '../_partials/NavBar';
 
 export default function WidgetsPage() {
-  const { data: streamer } = useQuery({
-    queryKey: ['streamer'],
-    queryFn: () => {
-      try {
-        return getStreamer();
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  });
+  const { data: session } = useSession();
+  const streamer = session?.user;
 
   const handleAlertTest = async () => {
     try {

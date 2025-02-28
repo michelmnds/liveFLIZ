@@ -25,6 +25,50 @@
         "select": "Bitte auswählen..."
       }
     },
+    "landingPage": {
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "subtitle": "Alles, was du über FLIZpay wissen musst",
+        "question": {
+          "1": "Wie integriere/installiere ich FLIZ?",
+          "2": "Wie funktioniert Cashback?",
+          "3": "Kann ich mit FLIZ auch bargeldlose Zahlungen vor Ort annehmen?",
+          "4": "Muss ich meinen aktuellen Zahlungsdienstleister wechseln?",
+          "5": "Wie kann ich FLIZpay testen?"
+        },
+        "answer": {
+          "1": "Es war noch nie leichter, Zahlungen anzunehmen. Du könntest innerhalb der nächsten 5 Minuten deine erste FLIZ Zahlung erhalten. Dank unserer Plugins benötigst du kein technisches Wissen für die Installation. FLIZ bietet fertige und sofort einsatzbereite Integrationen mit Shopsoftware im E-Commerce. Außerdem ist eine individuelle Integration über unsere standardisierte API möglich (siehe mehr auf unserer Seite für Entwickler). Erstelle dein Firmenkonto und folge den Schritten zur Installation.",
+          "2": "Cashback wird von Einkäufen abgezogen, die deine Kunden mit FLIZ bezahlen. Diese Funktion ist optional. Wenn du Cashback anbieten möchtest, kannst du den Betrag in deinem Firmenkonto festlegen. Du kannst frei wählen, wie viel Cashback du gibst, und du kannst die Cashback-Funktion jederzeit in deinem Firmenkonto aktivieren oder deaktivieren. Aktuell steht Cashback ausschließlich für WooCommerce Shops zur Verfügung.",
+          "3": "Ja. Sobald du dich für ein Firmenkonto anmeldest, kannst du unsere App nutzen, um Zahlungen persönlich entgegenzunehmen. Du kannst außerdem Unterkonten für deine Mitarbeiter einrichten, sodass sie FLIZ-Zahlungen annehmen und Zahlungsbestätigungen auf ihren Handys erhalten. Aber das ist noch nicht alles – unsere QR-Codes lassen sich auch in gedruckter Form verwenden.",
+          "4": "Nein, du musst deinen aktuellen Zahlungsdienstleister nicht wechseln. FLIZ ist eine eigenständige gebührenfreie Zahlungsmethode, die deine bestehenden Zahlungsoptionen ergänzt, ohne sie notwendigerweise zu ersetzen. Wenn du weiterhin Zahlungsmethoden anbieten möchtest, die Gebühren verlangen, kannst du natürlich alles so belassen, wie es ist - und FLIZ hinzufügen. Um jedoch Einsparungen für alle zu optimieren, empfehlen wir, FLIZ als erste Wahl für deine Kunden anzubieten.",
+          "5": "Wir bieten aktuell keine Testversion an. FLIZpay kann aber in jedem Staging-Environment installiert werden. Im Fall von Zahlungen vor Ort kann die FLIZpay-App installiert und mit einem Firmenkonto genutzt werden. Egal wo, es werden dabei immer echte Zahlungen ermöglicht. Daher empfehlen wir, im FLIZpay-Firmenkonto aus Buchhaltungsgründen eine private IBAN für Tests zu hinterlegen und anschließend mit einem privaten FLIZpay-Konto über die App zu zahlen, z. B. einen Cent. Achtet darauf, dass ihr zum Zahlen ein privates FLIZpay-Konto nutzt, da mit FLIZpay-Firmenkonten nicht gezahlt werden kann."
+        }
+      }
+    },
+    "footer": {
+      "company": {
+        "title": "Unternehmen",
+        "careers": "Karriere"
+      },
+      "products": {
+        "title": "Nutzer",
+        "customers": "Privatkunden",
+        "companies": "Firmen",
+        "developers": "Entwickler"
+      },
+      "support": {
+        "title": "Support",
+        "help": "Kontakt"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "imprint": "Impressum",
+        "privacy": "Datenschutzerklärung",
+        "terms": "AGB"
+      },
+      "copyright": "© {year} FLIZpay GmbH. Alle Rechte vorbehalten.",
+      "sepaNote": "Die Verwendung des SEPA-Zeichens erfolgt unter Lizenz des European Payments Council AISBL."
+    },
     "login": {
       "title": {
         "forgotPassword": "Passwort vergessen?",
@@ -410,13 +454,6 @@
         "login": "Log in",
         "logout": "Log out",
         "signup": "Registrieren"
-      }
-    },
-    "footer": {
-      "title": {
-        "allRightsReserved": "© 2024 FLIZpay GmbH.",
-        "imprint": "Impressum",
-        "terms": "AGBs"
       }
     },
     "sidebar": {

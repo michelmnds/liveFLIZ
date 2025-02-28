@@ -1,8 +1,9 @@
+import { authOptions } from '@/config/auth';
 import { Providers } from '@/providers/Providers';
 import { cn } from '@/utils/cn';
 import '@radix-ui/themes/styles.css';
 import type { Metadata } from 'next';
-import { getSession } from 'next-auth/react';
+import { getServerSession } from 'next-auth';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -30,7 +31,7 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
   const messages = await getMessages();
-  const session = await getSession();
+  const session = await getServerSession(authOptions);
 
   return (
     <html lang={locale}>
