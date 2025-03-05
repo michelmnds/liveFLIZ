@@ -12,10 +12,10 @@ export const streamerSchema = object({
   logoUrl: string(),
   language: optional(string()),
   widgets: object({
-    qrc_id: optional(string()),
-    alert_id: optional(string())
+    qrc_id: string(),
+    alert_id: string()
   }),
-  minDonationAmount: optional(string()),
+  minDonationAmount: string(),
   transactions: optional(object({}))
 });
 
