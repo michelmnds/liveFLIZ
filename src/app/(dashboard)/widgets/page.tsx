@@ -15,6 +15,7 @@ import { UrlField } from '@/components/UrlField';
 import { editMinDonationAmountSchema } from '@/schemas/editProfile.schema';
 import { StreamerType } from '@/schemas/streamer.schema';
 import { editStreamer, restartWidget, testAlert } from '@/services/api/apiClient';
+import { formatAmount } from '@/utils/amount';
 import { valibotResolver } from '@hookform/resolvers/valibot';
 import { Tooltip } from '@radix-ui/themes';
 import { useMutation } from '@tanstack/react-query';
@@ -34,11 +35,13 @@ export default function WidgetsPage() {
   const { data: session, update } = useSession();
   const streamer = session?.user;
   const language = useLocale();
+  const defaultValue = language === 'de' ? '0,00 €' : '€0.00';
+
   const { control, handleSubmit, watch, reset } = useForm({
     mode: 'onSubmit',
     resolver: valibotResolver(editMinDonationAmountSchema),
     defaultValues: {
-      minDonationAmount: `€${streamer?.minDonationAmount?.toString()}` || '€0.00' // TO-DO: FORMAT THE AMOUNT COMING FROM THE SESSION
+      minDonationAmount: formatAmount(parseFloat(streamer?.minDonationAmount || '0'), language) || defaultValue // TO-DO: FORMAT THE AMOUNT COMING FROM THE SESSION
     }
   });
 
@@ -60,7 +63,7 @@ export default function WidgetsPage() {
   const handleMinimumAmountDisable = async () => {
     try {
       mutate({ minDonationAmount: '0' });
-      reset({ minDonationAmount: '€0.00' });
+      reset({ minDonationAmount: defaultValue });
     } catch (error) {
       console.error(error);
     }
@@ -178,7 +181,7 @@ export default function WidgetsPage() {
               />
               <div className="flex w-full gap-2">
                 <Button
-                  disabled={watch('minDonationAmount') == '€0.00' || watch('minDonationAmount') == '€0'}
+                  disabled={watch('minDonationAmount') == defaultValue || watch('minDonationAmount') == '€0'}
                   type="submit">
                   {t('Labels.common.button.save')}
                 </Button>

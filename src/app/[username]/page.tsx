@@ -17,7 +17,7 @@ import { convertAmountToJSNumber } from '@/utils/amount';
 import { CHECKOUT_URL } from '@/utils/CONSTS';
 import { valibotResolver } from '@hookform/resolvers/valibot';
 import { useQuery } from '@tanstack/react-query';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
@@ -30,8 +30,10 @@ import { IoMdArrowRoundBack } from 'react-icons/io';
 export default function DonationPage() {
   const t = useTranslations();
   const router = useRouter();
+  const locale = useLocale();
   const [qrcValue, setQrcValue] = useState('');
   const { username } = useParams() as { username?: string };
+  const defaultValue = locale === 'de' ? '0,00 €' : '€0.00';
 
   const { handleSubmit, control, setValue, formState, watch } = useForm({
     mode: 'onChange',
@@ -39,7 +41,7 @@ export default function DonationPage() {
     defaultValues: {
       username: '',
       message: '',
-      amount: '€0.00'
+      amount: defaultValue
     }
   });
 
@@ -67,7 +69,7 @@ export default function DonationPage() {
   const handleCancel = () => {
     setQrcValue('');
     setValue('message', '');
-    setValue('amount', '€0.00');
+    setValue('amount', defaultValue);
   };
 
   return (
