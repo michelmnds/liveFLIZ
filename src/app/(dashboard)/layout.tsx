@@ -1,4 +1,3 @@
-// app/(dashboard)/layout.tsx
 import React from 'react';
 import { NavBar } from './_partials/NavBar';
 

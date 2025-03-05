@@ -2,6 +2,7 @@
   "Labels": {
     "common": {
       "button": {
+        "disable": "Deaktivieren",
         "continue": "Weiter",
         "cancel": "Abbrechen",
         "login": "Login",

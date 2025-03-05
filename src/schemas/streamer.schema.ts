@@ -15,6 +15,7 @@ export const streamerSchema = object({
     qrc_id: optional(string()),
     alert_id: optional(string())
   }),
+  minDonationAmount: optional(string()),
   transactions: optional(object({}))
 });
 

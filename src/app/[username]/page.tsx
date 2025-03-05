@@ -33,13 +33,13 @@ export default function DonationPage() {
   const [qrcValue, setQrcValue] = useState('');
   const { username } = useParams() as { username?: string };
 
-  const { handleSubmit, control, setValue, formState } = useForm({
+  const { handleSubmit, control, setValue, formState, watch } = useForm({
     mode: 'onChange',
     resolver: valibotResolver(donationSchema),
     defaultValues: {
       username: '',
       message: '',
-      amount: '0.00'
+      amount: '€0.00'
     }
   });
 
@@ -138,12 +138,17 @@ export default function DonationPage() {
                   )}
                   control={control}
                 />
-                <p className="text-xs text-gray-500">Minimum amount is ?</p>
+                <p className="text-xs text-gray-500">Minimum amount is {streamer?.minDonationAmount}</p>
               </div>
             </label>
           </div>
           <AlertDialog>
-            <AlertDialogTrigger asChild disabled={!formState.isValid}>
+            <AlertDialogTrigger
+              asChild
+              disabled={
+                !formState.isValid ||
+                parseFloat(watch('amount').replace('€', '')) < parseFloat(streamer?.minDonationAmount || '0')
+              }>
               <Button type="submit">{t('Labels.common.button.continue')}</Button>
             </AlertDialogTrigger>
             {!isMobile && (

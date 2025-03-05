@@ -8,20 +8,63 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger
 } from '@/components/AlertDialog';
+import { Button } from '@/components/Button';
+import { AmountInput } from '@/components/inputs/AmountInput';
+import { Typography } from '@/components/Typography';
 import { UrlField } from '@/components/UrlField';
-import { restartWidget, testAlert } from '@/services/api/apiClient';
+import { editMinDonationAmountSchema } from '@/schemas/editProfile.schema';
+import { StreamerType } from '@/schemas/streamer.schema';
+import { editStreamer, restartWidget, testAlert } from '@/services/api/apiClient';
+import { valibotResolver } from '@hookform/resolvers/valibot';
 import { Tooltip } from '@radix-ui/themes';
+import { useMutation } from '@tanstack/react-query';
 import { useSession } from 'next-auth/react';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
+import { Controller, useForm } from 'react-hook-form';
 import { FaCirclePlay } from 'react-icons/fa6';
 import { IoLink } from 'react-icons/io5';
 import { LuPencilOff } from 'react-icons/lu';
 import { MdOutlineReplay } from 'react-icons/md';
+import { toast } from 'sonner';
 
 export default function WidgetsPage() {
-  const { data: session } = useSession();
+  const t = useTranslations();
+  const { data: session, update } = useSession();
   const streamer = session?.user;
+  const language = useLocale();
+  const { control, handleSubmit, watch, reset } = useForm({
+    mode: 'onSubmit',
+    resolver: valibotResolver(editMinDonationAmountSchema),
+    defaultValues: {
+      minDonationAmount: `€${streamer?.minDonationAmount?.toString()}` || '€0.00' // TO-DO: FORMAT THE AMOUNT COMING FROM THE SESSION
+    }
+  });
+
+  const { mutate } = useMutation({
+    mutationFn: async (data: Partial<StreamerType>) => {
+      return await editStreamer({ minDonationAmount: data.minDonationAmount });
+    },
+    onSuccess: async (_data, variables) => {
+      await update({ user: { minDonationAmount: variables.minDonationAmount } });
+
+      toast.success(t('Labels.dashboard.profile.toast.baseInfo.success'));
+    },
+    onError: error => {
+      console.error(error.message);
+      toast.error(t('Errors.serverError'));
+    }
+  });
+
+  const handleMinimumAmountDisable = async () => {
+    try {
+      mutate({ minDonationAmount: '0' });
+      reset({ minDonationAmount: '€0.00' });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handleAlertTest = async () => {
     try {
@@ -110,6 +153,46 @@ export default function WidgetsPage() {
                 <LuPencilOff size={18} className="text-grey80" />
               </Tooltip>
             </div>
+            <hr className="w-full border border-solid border-blue80" />
+            <form
+              onSubmit={handleSubmit(data => mutate(data))}
+              className="flex w-full flex-col items-start justify-center gap-2">
+              <Typography type="span" className="text-gray-500">
+                Minimum Donation Amount
+              </Typography>
+              <Controller
+                control={control}
+                name="minDonationAmount"
+                render={({ field }) => (
+                  <AmountInput
+                    setAmount={field.onChange}
+                    amount={field.value}
+                    grouping
+                    className="mb-2"
+                    decimals={2}
+                    language={language}
+                    currency
+                    {...field}
+                  />
+                )}
+              />
+              <div className="flex w-full gap-2">
+                <Button
+                  disabled={watch('minDonationAmount') == '€0.00' || watch('minDonationAmount') == '€0'}
+                  type="submit">
+                  {t('Labels.common.button.save')}
+                </Button>
+                {streamer?.minDonationAmount?.toString() !== '0' && (
+                  <Button
+                    variant="outline"
+                    type="button"
+                    className="bg-transparent"
+                    onClick={handleMinimumAmountDisable}>
+                    {t('Labels.common.button.disable')}
+                  </Button>
+                )}
+              </div>
+            </form>
           </div>
         </div>
         <div className="flex flex-col items-start justify-center gap-1">
