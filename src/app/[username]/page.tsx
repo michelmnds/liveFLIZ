@@ -15,7 +15,7 @@ import { MessageInput } from '@/components/inputs/MessageInput';
 import { Typography } from '@/components/Typography';
 import { donationSchema } from '@/schemas/donation.schema';
 import { getStreamerByUsername } from '@/services/api/apiClient';
-import { convertAmountToJSNumber } from '@/utils/amount';
+import { convertAmountToJSNumber, formatAmount } from '@/utils/amount';
 import { CHECKOUT_URL } from '@/utils/CONSTS';
 import { valibotResolver } from '@hookform/resolvers/valibot';
 import { useQuery } from '@tanstack/react-query';
@@ -58,7 +58,10 @@ export default function DonationPage() {
       } catch (error) {
         console.error(error);
       }
-    }
+    },
+    gcTime: Infinity,
+    staleTime: Infinity,
+    refetchOnMount: 'always'
   });
 
   const handleContinue = (data?: { message: string; amount: string; username: string }) => {
@@ -145,7 +148,9 @@ export default function DonationPage() {
                     control={control}
                   />
                   {parseFloat(streamer.minDonationAmount) > 0 && (
-                    <p className="ml-1 text-xs text-gray-500">Minimum amount is {streamer.minDonationAmount}</p>
+                    <p className="ml-1 text-xs text-gray-500">
+                      Minimum amount is {formatAmount(Number(streamer.minDonationAmount), locale)}
+                    </p>
                   )}
                 </div>
               </label>
