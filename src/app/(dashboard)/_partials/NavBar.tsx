@@ -1,7 +1,7 @@
 'use client';
 
 import { Avatar } from '@/components/Avatar';
-import { useSession } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaUserCircle } from 'react-icons/fa';
@@ -62,8 +62,12 @@ export const NavBar = () => {
               Help
             </Link>
           </div>
+          <h1 className="mt-4 cursor-pointer text-lg font-bold underline" onClick={() => signOut()}>
+            Logout
+          </h1>
         </div>
       </div>
+
       <Image src={'/white-logo.svg'} width={100} height={100} alt="Fliz Logo" />
     </nav>
   );
