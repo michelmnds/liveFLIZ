@@ -31,7 +31,11 @@ export default function DashboardPage() {
   const receivedMessages = useMemo(() => {
     const transactionsWithMessags = transactions?.filter(transaction => transaction.message !== '');
 
-    return transactionsWithMessags?.map(transaction => transaction.message).slice(0, 10);
+    return transactionsWithMessags
+      ?.map(transaction => {
+        return { message: transaction.message, senderName: transaction.senderId.fullName };
+      })
+      .slice(0, 10);
   }, [transactions]);
 
   return (
@@ -74,10 +78,10 @@ export default function DashboardPage() {
                   <Spinner size={16} color="#001f3f" />
                 </div>
               ) : receivedMessages?.length ? (
-                receivedMessages.map((message, index) => (
+                receivedMessages.map((transaction, index) => (
                   <div key={index} className="w-full rounded-lg border border-secondaryColor bg-black bg-opacity-5 p-2">
-                    <span className="text-xs text-secondaryColor">username said:</span>
-                    <h1 className="text-md w-full pt-2 font-bold italic text-secondaryColor">{`"${message}"`}</h1>
+                    <span className="text-xs text-secondaryColor">{transaction.senderName} said:</span>
+                    <h1 className="text-md w-full pt-2 font-bold italic text-secondaryColor">{`"${transaction.message}"`}</h1>
                   </div>
                 ))
               ) : (
