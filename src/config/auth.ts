@@ -18,7 +18,7 @@ type LoginResponse = {
 const MAX_AGE = 60 * 60 * 100; // 100 hours
 
 export const authOptions: NextAuthOptions = {
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.AUTH_SECRET,
   session: {
     strategy: 'jwt',
     maxAge: MAX_AGE // How long until an idle session expires and is no longer valid
