@@ -1,5 +1,6 @@
 'use client';
 
+import { Avatar } from '@/components/Avatar';
 import { CustomInput } from '@/components/CustomInput';
 import { Dialog } from '@/components/Dialog';
 import { Label } from '@/components/Label';
@@ -9,10 +10,8 @@ import { ICON_SM, ICON_XS } from '@/utils/CONSTS';
 import { cn } from '@/utils/cn';
 import { useQuery } from '@tanstack/react-query';
 import { useLocale, useTranslations } from 'next-intl';
-import NextImage from 'next/image';
 import { useRef, useState } from 'react';
 import { FaPen } from 'react-icons/fa';
-import { FaUser } from 'react-icons/fa6';
 import { IoIosInformationCircleOutline } from 'react-icons/io';
 import { ProfilePictureEditor } from './ProfilePictureEditor';
 
@@ -45,24 +44,7 @@ export function ProfilePicture() {
   return (
     <Dialog open={openEditor} onOpenChange={setOpenEditor}>
       <div className="relative flex max-w-fit items-start gap-3">
-        <div
-          className={cn(
-            'text-mint-20 relative flex h-[136px] w-[136px] items-center justify-center rounded-xl',
-            streamer?.logoUrl ? 'border-2 border-primaryColor bg-white' : 'bg-primaryColor'
-          )}>
-          {streamer?.logoUrl ? (
-            <NextImage
-              src={streamer?.logoUrl}
-              priority
-              alt="Profile picture"
-              width={136}
-              height={136}
-              className="z-10 rounded-xl"
-            />
-          ) : (
-            <FaUser size={60} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
-          )}
-        </div>
+        <Avatar logoUrl={streamer?.logoUrl} height={136} width={136} rounded="xl" className="shadow-xl" />
         {!streamer?.logoUrl && (
           <div
             className={cn(

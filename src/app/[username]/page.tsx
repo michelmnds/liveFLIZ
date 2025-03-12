@@ -7,6 +7,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger
 } from '@/components/AlertDialog';
+import { Avatar } from '@/components/Avatar';
 import { Button } from '@/components/Button';
 import { CustomInput } from '@/components/CustomInput';
 import { AmountInput } from '@/components/inputs/AmountInput';
@@ -94,15 +95,7 @@ export default function DonationPage() {
           <form
             onSubmit={handleSubmit(handleContinue)}
             className="flex w-[350px] flex-col items-center justify-center gap-6 rounded-lg border bg-white p-6 shadow">
-            {streamer?.logoUrl && (
-              <Image
-                src={streamer.logoUrl || ''}
-                alt="streamer's logo"
-                width={80}
-                height={80}
-                className="rounded-full shadow-lg"
-              />
-            )}
+            <Avatar logoUrl={streamer?.logoUrl} width={80} height={80} rounded="full" className="shadow-lg" />
             <div className="flex flex-col items-center justify-center">
               <h1 className="text-xl font-bold text-gray-800">{streamer?.username || ''}</h1>
               <p className="text-md font-semibold text-gray-500">Send a message</p>

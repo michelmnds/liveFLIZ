@@ -1,5 +1,6 @@
 'use client';
 
+import { Avatar } from '@/components/Avatar';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,15 +18,7 @@ export const NavBar = () => {
     <nav className="flex h-screen w-[20%] flex-col items-start justify-start bg-secondaryColor p-8 font-medium text-green-50 transition-all">
       <div className="flex h-full flex-col items-start justify-start gap-8">
         <div className="flex flex-row items-center justify-start gap-2">
-          {streamer?.logoUrl && (
-            <Image
-              src={streamer.logoUrl}
-              className="rounded-full bg-white"
-              width={40}
-              height={40}
-              alt="Streamer Logo"
-            />
-          )}
+          <Avatar logoUrl={streamer?.logoUrl} height={40} width={40} rounded="full" className="bg-white" />
           <h1 className="text-xl font-bold">{streamer?.username}</h1>
         </div>
         <div className="flex flex-col items-start justify-start gap-6">
